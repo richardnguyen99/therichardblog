@@ -5,7 +5,9 @@
 </p>
 <h1 align="center">
   Gatsby minimal starter
-</h1>
+</h1> 
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ae4566ff-f8d9-4189-b860-8b48736a1dce/deploy-status)](https://app.netlify.com/sites/therichardblog/deploys)
 
 ## 🚀 Quick start
 
