@@ -17,6 +17,7 @@
     "lint": "eslint .",
     "test": "jest",
     "prepare": "husky install",
+    "cy:install": "cypress install",
     "cy:open": "cypress open",
     "cy:run": "cypress run",
     "test:e2e": "start-server-and-test develop http://localhost:8000 cy:open",
