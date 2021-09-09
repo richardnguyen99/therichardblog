@@ -74,7 +74,7 @@ jobs:
       - run: *start-web
       - run:
           name: Install Cypress
-          command: npm run cypress:install
+          command: npm run cy:install
       - run:
           name: Run E2E Tests
           command: |
