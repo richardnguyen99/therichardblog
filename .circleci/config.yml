@@ -29,7 +29,7 @@ jobs:
       TERM: xterm
     steps:
       - attach_workspace:
-        at: ~/therichardblog
+          at: ~/therichardblog
       - run: npm run test
 
   test_e2e:
@@ -48,7 +48,7 @@ jobs:
       TERM: xterm
     steps:
       - attach_workspace:
-          at: ~/spectrum
+          at: ~/therichardblog
       - run: *start-web
       - run:
           name: Install Cypress
