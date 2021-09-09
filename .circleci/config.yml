@@ -90,7 +90,7 @@ jobs:
             fi
 
   build:
-    executore: node
+    executor: node
     steps:
       - checkout
       - restore_cache: *restore-npm-cache
@@ -106,7 +106,7 @@ jobs:
             - public
 
   deploy:
-    executore: node
+    executor: node
     steps:
       - checkout
 
