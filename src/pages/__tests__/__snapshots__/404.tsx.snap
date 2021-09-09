@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ErrorPage /> should match snapshot 1`] = `
+<div>
+  <main
+    style="color: rgb(35, 33, 41); padding: 96px; font-family: -apple-system, Roboto, sans-serif, serif;"
+  >
+    <title>
+      Not found
+    </title>
+    <h1
+      style="margin-top: 0px; margin-bottom: 64px; max-width: 320px;"
+    >
+      Page not found
+    </h1>
+    <p
+      style="margin-bottom: 48px;"
+    >
+      Sorry
+       
+      <span
+        aria-label="Pensive emoji"
+        role="img"
+      >
+        😔
+      </span>
+       
+      we couldn’t find what you were looking for.
+      <br />
+      <br />
+      <a
+        href="/"
+      >
+        Go home
+      </a>
+      .
+    </p>
+  </main>
+</div>
+`;

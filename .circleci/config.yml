@@ -1,0 +1,71 @@
+# CircleCI configuration for the Richard's blog
+version: 2.1
+
+aliases:
+  - &start-web
+    name: start web client in the background
+    command: npm run develop
+    background: true
+
+defaults: &defaults
+  working_directory: ~/therichardblog
+
+js_defaults: &js_defaults
+  <<: *defaults
+  docker:
+    - image: circleci/node:8
+
+jobs:
+  checkout_environment:
+    <<: *js_defaults
+    steps:
+      - checkout
+
+  test_unit:
+    <<: *defaults
+    docker:
+      - image: circleci/node:8
+    environment:
+      TERM: xterm
+    steps:
+      - attach_workspace:
+        at: ~/therichardblog
+      - run: npm run test
+
+  test_e2e:
+    <<: *defaults
+    docker:
+      - image: circleci/node:8-browsers
+      - image: cypress/base:6
+    parameters:
+      parallelism:
+        type: integer
+        default: 1
+        description: Number of boxes to use to run this job
+
+    parallelism: <<parameters.parallelism>>
+    environment:
+      TERM: xterm
+    steps:
+      - attach_workspace:
+          at: ~/spectrum
+      - run: *start-web
+      - run:
+          name: Install Cypress
+          command: yarn run cypress:install
+      - run:
+          name: Run E2E Tests
+          command: |
+            if [ $CYPRESS_RECORD_KEY ]; then
+              yarn run test:e2e -- --record --parallel
+            else
+              yarn run test:e2e
+            fi
+
+workflows:
+  test:
+    jobs:
+      - checkout_environment
+      - test_unit:
+        requires:
+          - checkout_environment

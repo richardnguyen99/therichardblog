@@ -33,7 +33,7 @@ module.exports = {
     ecmaVersion: 12,
     sourceType: "module",
   },
-  plugins: ["react", "import", "jsx-a11y", "@typescript-eslint"],
+  plugins: ["react", "react-hooks", "import", "jsx-a11y", "@typescript-eslint"],
   rules: {
     indent: ["error", 2],
     "linebreak-style": ["error", "unix"],
@@ -50,6 +50,8 @@ module.exports = {
      */
     "react/react-in-jsx-scope": "off",
     "react/prop-types": "off",
+    "react-hooks/rules-of-hooks": "warn",
+    "react-hooks/exhaustive-deps": "warn",
     "jsx-a11y/alt-text": [
       "warn",
       {
