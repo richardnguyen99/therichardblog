@@ -32,8 +32,22 @@ jobs:
     environment:
       TERM: xterm
     steps:
+      - restore_cache:
+          keys:
+            - v1-deps-{{ .Branch }}-{{ checksum "package.json" }}
+            - v1-deps-{{ .Branch }}
+            - v1-deps
       - attach_workspace:
           at: ~/therichardblog
+      - run:
+          name: Install Dependencies
+          command: npm ci
+      - save_cache:
+          key: v1-deps-{{ .Branch }}-{{ checksum "package.json" }}
+          # cache NPM modules and the folder with the Cypress binary
+          paths:
+            - ~/.npm
+            - ~/.cache
       - run: npm run test
 
   test_e2e:
