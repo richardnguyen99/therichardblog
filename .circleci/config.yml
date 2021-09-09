@@ -20,6 +20,7 @@ aliases:
     paths:
       - ~/.npm
       - ~/.cache
+      - ~/node_modules
 
   - &start-web
     name: start web client in the background
@@ -111,7 +112,7 @@ jobs:
       - checkout
 
       - attach_workspace:
-          at: ~/therichardblog
+          at: ./
       - restore_cache: *restore-npm-cache
       - run:
           name: Install dependencies
