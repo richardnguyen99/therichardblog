@@ -118,10 +118,10 @@ jobs:
           command: npm install --production
       - run:
           name: Install netlify-cli
-          command: sudo npm install -g --silent netlify-cli
+          command: npm install --silent netlify-cli
       - run:
           name: Deploy to Netlify
-          command: netlify deploy --dir=./public -p
+          command: npx netlify deploy --dir=./public -p
 
 workflows:
   test:
