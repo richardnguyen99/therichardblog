@@ -115,7 +115,7 @@ jobs:
       - restore_cache: *restore-npm-cache
       - run:
           name: Install dependencies
-          command: npm i
+          command: npm install --production
       - run:
           name: Install netlify-cli
           command: sudo npm install -g --silent netlify-cli
