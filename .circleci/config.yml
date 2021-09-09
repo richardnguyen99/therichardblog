@@ -15,7 +15,6 @@ aliases:
     paths:
       - ~/.npm
       - ~/.cache
-      - ~/node_modules
 
   - &start-web
     name: start web client in the background
@@ -86,7 +85,6 @@ jobs:
             fi
 
   build:
-    executor: node
     steps:
       - checkout
       - restore_cache: *restore-npm-cache
@@ -102,7 +100,6 @@ jobs:
             - public
 
   deploy:
-    executor: node
     steps:
       - checkout
 
