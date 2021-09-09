@@ -15,6 +15,7 @@ aliases:
     paths:
       - ~/.npm
       - ~/.cache
+      - ~/node_modules
 
   - &start-web
     name: start web client in the background
@@ -84,6 +85,40 @@ jobs:
               npm run test:e2e
             fi
 
+  build:
+    executor: node
+    steps:
+      - checkout
+      - restore_cache: *restore-npm-cache
+      - run:
+          name: Install dependencies
+          command: npm i
+      - run:
+          name: Build
+          command: npm run build
+      - persist_to_workspace:
+          root: ./
+          paths:
+            - public
+
+  deploy:
+    executor: node
+    steps:
+      - checkout
+
+      - attach_workspace:
+          at: ~/therichardblog
+      - restore_cache: *restore-npm-cache
+      - run:
+          name: Install dependencies
+          command: npm i
+      - run:
+          name: Install netlify-cli
+          command: npm install -g --silent netlify-cli
+      - run:
+          name: Deploy to Netlify
+          command: netlify deploy --dir=./public -p
+
 workflows:
   test:
     jobs:
@@ -94,3 +129,15 @@ workflows:
       - test_e2e:
           requires:
             - checkout_environment
+
+      - build:
+          requires:
+            - test_unit
+            - test_e2e
+
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only: main
