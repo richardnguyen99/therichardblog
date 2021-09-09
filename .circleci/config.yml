@@ -22,8 +22,8 @@ jobs:
       - checkout
 
     - persist_to_workspace:
-      root: .
-      paths: .
+        root: .
+        paths: .
 
   test_unit:
     <<: *defaults
