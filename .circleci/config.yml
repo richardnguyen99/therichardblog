@@ -118,7 +118,7 @@ jobs:
           command: npm i
       - run:
           name: Install netlify-cli
-          command: npm install -g --silent netlify-cli
+          command: sudo npm install -g --silent netlify-cli
       - run:
           name: Deploy to Netlify
           command: netlify deploy --dir=./public -p
