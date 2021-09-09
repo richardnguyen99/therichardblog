@@ -20,7 +20,7 @@
     "cy:install": "cypress install",
     "cy:open": "cypress open",
     "cy:run": "cypress run",
-    "test:e2e": "cy:run"
+    "test:e2e": "cypress run"
   },
   "dependencies": {
     "@mdx-js/mdx": "^1.6.22",
