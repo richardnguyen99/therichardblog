@@ -67,5 +67,5 @@ workflows:
     jobs:
       - checkout_environment
       - test_unit:
-        requires:
-          - checkout_environment
+          requires:
+            - checkout_environment
