@@ -40,8 +40,8 @@ jobs:
       - save_cache: *save-npm-cache
 
       - persist_to_workspace:
-          root: ~/.npm
-          paths: ~/.cache
+          root: .
+          paths: .
 
   test_unit:
     <<: *defaults
@@ -52,7 +52,6 @@ jobs:
     steps:
       - attach_workspace:
           at: ~/therichardblog
-      - save_cache:
       - run: npm run test
 
   test_e2e:
@@ -75,14 +74,14 @@ jobs:
       - run: *start-web
       - run:
           name: Install Cypress
-          command: yarn run cypress:install
+          command: npm run cypress:install
       - run:
           name: Run E2E Tests
           command: |
             if [ $CYPRESS_RECORD_KEY ]; then
-              yarn run test:e2e -- --record --parallel
+              npm run test:e2e -- --record --parallel
             else
-              yarn run test:e2e
+              npm run test:e2e
             fi
 
 workflows:
