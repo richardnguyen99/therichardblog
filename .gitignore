@@ -120,3 +120,6 @@ public
 # cypress
 cypress/screenshots/
 cypress/videos/
+
+# Local Netlify folder
+.netlify
