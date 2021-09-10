@@ -16,7 +16,7 @@ const headingAccentStyles = {
   color: "#663399",
 };
 
-const IndexPage: React.FC = () => {
+const PostPage: React.FC = () => {
   return (
     <main style={pageStyles}>
       <Navbar>
@@ -29,7 +29,7 @@ const IndexPage: React.FC = () => {
           <Navbar.Link href="https://github.com/richardnguyen99/therichardblog">Github</Navbar.Link>
         </Navbar.Item>
       </Navbar>
-      <title>Home Page</title>
+      <title>PostPage</title>
       <h1 style={headingStyles}>
         Congratulations
         <br />
@@ -46,4 +46,4 @@ const IndexPage: React.FC = () => {
   );
 };
 
-export default IndexPage;
+export default PostPage;

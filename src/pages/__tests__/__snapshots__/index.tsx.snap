@@ -5,6 +5,42 @@ exports[`<Index /> should match snapshot 1`] = `
   <main
     style="color: rgb(35, 33, 41); padding: 96px; font-family: -apple-system, Roboto, sans-serif, serif;"
   >
+    <nav
+      class="sc-bdfBQB MKTIf"
+    >
+      <a
+        class="sc-dlfnuX sc-hKgJUU hnYgx eOFVTJ"
+        href="/"
+      >
+        Richard's blog
+      </a>
+      <div
+        class="sc-gsTEea jYRocp"
+      >
+        <a
+          class="sc-dlfnuX hnYgx"
+          href="/about"
+        >
+          About
+        </a>
+        <a
+          class="sc-dlfnuX hnYgx"
+          href="/post"
+        >
+          About
+        </a>
+      </div>
+      <div
+        class="sc-gsTEea gMWZKU"
+      >
+        <a
+          class="sc-dlfnuX hnYgx"
+          href="https://github.com/richardnguyen99/therichardblog"
+        >
+          Github
+        </a>
+      </div>
+    </nav>
     <title>
       Home Page
     </title>

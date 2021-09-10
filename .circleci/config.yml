@@ -90,22 +90,6 @@ jobs:
               npm run test:e2e
             fi
 
-  build:
-    executor: node
-    steps:
-      - checkout
-      - restore_cache: *restore-npm-cache
-      - run:
-          name: Install dependencies
-          command: npm i
-      - run:
-          name: Build
-          command: npm run build
-      - persist_to_workspace:
-          root: ./
-          paths:
-            - public
-
   deploy:
     executor: node
     steps:
@@ -120,6 +104,9 @@ jobs:
       - run:
           name: Install netlify-cli
           command: npm install --silent netlify-cli
+      -run:
+          name: Build
+          command: npm run build
       - run:
           name: Deploy to Netlify
           command: npx netlify deploy --dir=./public -p
@@ -135,14 +122,10 @@ workflows:
           requires:
             - checkout_environment
 
-      - build:
+      - deploy:
           requires:
             - test_unit
             - test_e2e
-
-      - deploy:
-          requires:
-            - build
           filters:
             branches:
               only: main
