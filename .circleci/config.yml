@@ -104,7 +104,7 @@ jobs:
       - run:
           name: Install netlify-cli
           command: npm install --silent netlify-cli
-      -run:
+      - run:
           name: Build
           command: npm run build
       - run:
