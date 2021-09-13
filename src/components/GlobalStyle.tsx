@@ -13,6 +13,12 @@ const GlobalStyle = createGlobalStyle`
     line-height: 1;
     font-family: -apple-system, Roboto, sans-serif, serif;
   }
+
+  body {
+    color: #efefe1;
+    fill: #efefe1;
+    background: #0e0e10;
+  }
 `;
 
 export default GlobalStyle;

@@ -5,43 +5,91 @@ exports[`<Index /> should match snapshot 1`] = `
   <main>
     <div>
       <nav
-        class="sc-bdfBQB MKTIf"
+        class="sc-gsTEea jEPedr"
       >
         <a
-          class="sc-dlfnuX sc-hKgJUU hnYgx eOFVTJ"
+          class="sc-hKgJUU sc-eCstlR ihbwFC fkQSOg"
           href="/"
         >
           Richard's blog
         </a>
         <div
-          class="sc-gsTEea jYRocp"
+          class="sc-dlfnuX kqAJEM"
         >
           <a
-            class="sc-dlfnuX hnYgx"
+            class="sc-hKgJUU ihbwFC"
             href="/about"
           >
             About
           </a>
           <a
-            class="sc-dlfnuX hnYgx"
+            class="sc-hKgJUU ihbwFC"
             href="/post"
           >
             About
           </a>
         </div>
         <div
-          class="sc-gsTEea gMWZKU"
+          class="sc-dlfnuX bxzGnt"
         >
           <a
-            class="sc-dlfnuX hnYgx"
+            class="sc-hKgJUU ihbwFC"
             href="https://github.com/richardnguyen99/therichardblog"
           >
             Github
           </a>
+          <span
+            class="sc-hKgJUU ihbwFC"
+            href=""
+            style="margin-right: 0px;"
+            to=""
+          >
+            <div
+              class="sc-jSgvzq hTFgyW"
+            >
+              <button
+                class="sc-iBPTik sBHNH"
+                style="padding: 0px;"
+              >
+                <svg
+                  fill="white"
+                  fill-rule="evenodd"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  width="16"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8 9a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM1.5 9a1.5 1.5 0 100-3 1.5 1.5 0 000 3zm13 0a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"
+                  />
+                </svg>
+              </button>
+              <ul
+                class="sc-gKseQn fsukdw southwest"
+                style="opacity: 0;"
+              >
+                <li
+                  class="sc-fubCzh kJPbRp"
+                >
+                  Tags
+                </li>
+                <li
+                  class="sc-fubCzh kJPbRp"
+                >
+                  Tags
+                </li>
+                <li
+                  class="sc-fubCzh kJPbRp"
+                >
+                  Tags
+                </li>
+              </ul>
+            </div>
+          </span>
         </div>
       </nav>
       <div
-        class="sc-eCstlR gjZcdj"
+        class="sc-bdfBQB iLJSdV"
       >
         <title>
           PostPage

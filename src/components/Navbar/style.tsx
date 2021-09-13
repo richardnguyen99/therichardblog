@@ -24,10 +24,16 @@ export const StyledNavbarItem = styled.div<{ full?: boolean }>`
   align-self: center;
   flex-wrap: nowrap;
 
+  &:last-child {
+    margin-right: 0;
+  }
+
   ${(props) => props.full && "flex: auto;"}
 `;
 
 export const StyledNavbarLink = styled.a`
+  display: inline-flex;
+  align-items: center;
   font-weight: 600;
   color: rgba(255, 255, 255, 1); // TODO: Implement color text for light theme
   white-space: nowrap;
