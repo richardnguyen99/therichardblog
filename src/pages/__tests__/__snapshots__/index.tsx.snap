@@ -8,7 +8,7 @@ exports[`<Index /> should match snapshot 1`] = `
         class="sc-gsTEea jEPedr"
       >
         <a
-          class="sc-hKgJUU sc-eCstlR ihbwFC fkQSOg"
+          class="sc-hKgJUU sc-eCstlR keQQxc fkQSOg"
           href="/"
         >
           Richard's blog
@@ -17,13 +17,13 @@ exports[`<Index /> should match snapshot 1`] = `
           class="sc-dlfnuX kqAJEM"
         >
           <a
-            class="sc-hKgJUU ihbwFC"
+            class="sc-hKgJUU keQQxc"
             href="/about"
           >
             About
           </a>
           <a
-            class="sc-hKgJUU ihbwFC"
+            class="sc-hKgJUU keQQxc"
             href="/post"
           >
             About
@@ -33,13 +33,13 @@ exports[`<Index /> should match snapshot 1`] = `
           class="sc-dlfnuX bxzGnt"
         >
           <a
-            class="sc-hKgJUU ihbwFC"
+            class="sc-hKgJUU keQQxc"
             href="https://github.com/richardnguyen99/therichardblog"
           >
             Github
           </a>
           <span
-            class="sc-hKgJUU ihbwFC"
+            class="sc-hKgJUU keQQxc"
             href=""
             style="margin-right: 0px;"
             to=""
@@ -66,7 +66,7 @@ exports[`<Index /> should match snapshot 1`] = `
               </button>
               <ul
                 class="sc-gKseQn fsukdw southwest"
-                style="opacity: 0;"
+                style="opacity: 0; display: false;"
               >
                 <li
                   class="sc-fubCzh kJPbRp"

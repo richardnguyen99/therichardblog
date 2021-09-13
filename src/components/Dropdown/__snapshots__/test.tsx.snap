@@ -24,7 +24,7 @@ exports[`<Dropdown> should match snapshot 1`] = `
     </button>
     <ul
       class="sc-gsTEea gqUDwU southwest"
-      style="opacity: 0;"
+      style="opacity: 0; display: false;"
     >
       <li
         class="sc-hKgJUU yprVz"

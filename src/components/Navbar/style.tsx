@@ -40,9 +40,9 @@ export const StyledNavbarLink = styled.a`
   cursor: pointer;
   text-decoration: none;
 
-  padding-top: 16px;
-  padding-bottom: 16px;
-  margin-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  margin-right: 32px;
 
   &:hover,
   &:focus {

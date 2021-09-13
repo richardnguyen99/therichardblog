@@ -1,6 +1,11 @@
 import * as React from "react";
 
 export interface NavbarProps {
+  /**
+   * @description Fires a callback when the navbar has shrank
+   */
+  onShrink?: () => void;
+
   [key: string]: any; // For spreading props
 }
 

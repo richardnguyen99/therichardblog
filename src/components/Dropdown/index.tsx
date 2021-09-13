@@ -64,8 +64,18 @@ const DropdownMenu: React.FC<DropdownMenuProps> = React.forwardRef<
   // Handle display animation
   React.useEffect(() => {
     if (innerRef && innerRef.current) {
+      innerRef.current.style.display = dropdownCtx.opening && "block";
       innerRef.current.style.opacity = dropdownCtx.opening ? "1" : "0";
       innerRef.current.style.scale = dropdownCtx.opening ? "1" : "0.8";
+
+      let interval;
+      if (!dropdownCtx.opening) {
+        interval = setInterval(() => {
+          innerRef.current.style.display = "none";
+        }, 1000);
+      }
+
+      return clearInterval(interval);
     }
   }, [dropdownCtx.opening, innerRef]);
 
@@ -92,9 +102,17 @@ DropdownMenu.displayName = "DropdownMenu";
 const DropdownItem: React.FC<DropdownItemProps> = React.forwardRef<
   HTMLLIElement,
   DropdownItemProps
->(({ children, ...rest }, ref) => {
+>(({ children, onSelect, ...rest }, ref) => {
+  const dropdownCtx = React.useContext(DropdownContext);
+
+  const handleClick = () => {
+    if (onSelect) onSelect();
+
+    dropdownCtx.toggle(false);
+  };
+
   return (
-    <StyledDropdownItem ref={ref} {...rest}>
+    <StyledDropdownItem ref={ref} onClick={handleClick} {...rest}>
       {children}
     </StyledDropdownItem>
   );

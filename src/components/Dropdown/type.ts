@@ -32,5 +32,10 @@ export interface DropdownMenuProps {
 }
 
 export interface DropdownItemProps {
+  /**
+   * @description Fires a callback when the item is selected
+   */
+  onSelect?: () => void;
+
   [key: string]: any; // For spreading variables
 }
