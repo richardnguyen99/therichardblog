@@ -49,11 +49,11 @@ const Layout: React.FC<LayoutProps> = React.forwardRef<HTMLDivElement, LayoutPro
             </Navbar.Link>
           </Navbar.Item>
         </Navbar>
-        <StyledContainer>{children}</StyledContainer>
+        <div id="content">{children}</div>
       </div>
     );
   }
 );
 Layout.displayName = "Layout";
 
-export default Object.assign(Layout, {});
+export default Object.assign(Layout, { Container: StyledContainer });
