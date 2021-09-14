@@ -47,23 +47,35 @@ exports[`<Index /> should match snapshot 1`] = `
             <div
               class="sc-jSgvzq hTFgyW"
             >
-              <button
-                class="sc-iBPTik sBHNH"
-                style="padding: 0px;"
+              <div
+                class="sc-pGacB dHoZoM"
               >
-                <svg
-                  fill="white"
-                  fill-rule="evenodd"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  width="16"
-                  xmlns="http://www.w3.org/2000/svg"
+                <div
+                  class="sc-jrAFXE lhdLbn"
+                  style="opacity: 0;"
                 >
-                  <path
-                    d="M8 9a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM1.5 9a1.5 1.5 0 100-3 1.5 1.5 0 000 3zm13 0a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"
-                  />
-                </svg>
-              </button>
+                  More
+                </div>
+                <div>
+                  <button
+                    class="sc-iBPTik sBHNH"
+                    style="padding: 0px;"
+                  >
+                    <svg
+                      fill="white"
+                      fill-rule="evenodd"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      width="16"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8 9a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM1.5 9a1.5 1.5 0 100-3 1.5 1.5 0 000 3zm13 0a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
               <ul
                 class="sc-gKseQn fsukdw southwest"
                 style="opacity: 0; display: false;"

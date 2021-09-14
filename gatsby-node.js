@@ -17,6 +17,10 @@ exports.onCreateWebpackConfig = ({ actions, stage, loaders }) => {
         "@styles": path.resolve(__dirname, "src", "styles"),
         "@generated": path.resolve(__dirname, "src", "generated"),
       },
+
+      fallback: {
+        timers: require.resolve("timers-browserify"),
+      },
     },
   });
 };

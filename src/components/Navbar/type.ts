@@ -6,6 +6,20 @@ export interface NavbarProps {
    */
   onShrink?: () => void;
 
+  /**
+   * @description Controls whether or not the navbar is shrinkable on scroll
+   *
+   * @default false
+   */
+  shrinkable?: boolean;
+
+  /**
+   * @description Controls whehter or not the navbar is fixed on the screen
+   *
+   * @default false
+   */
+  fixed?: boolean;
+
   [key: string]: any; // For spreading props
 }
 

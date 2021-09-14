@@ -14,6 +14,8 @@ import {
   StyledDropdownToggle,
 } from "./style";
 import useMergeRefs from "@hooks/useMergedRefs";
+import { Link } from "gatsby";
+import Tooltip from "@components/Tooltip";
 
 /**
  * @description Toggles to show or hide the dropdown menu component
@@ -21,14 +23,20 @@ import useMergeRefs from "@hooks/useMergedRefs";
 const DropdownToggle: React.FC<DropdownToggleProps> = React.forwardRef<
   HTMLButtonElement,
   DropdownToggleProps
->(({ children, ...rest }, ref) => {
+>(({ children, tooltip = "", ...rest }, ref) => {
   const dropdownCtx = React.useContext(DropdownContext);
 
   const handleClick = () => {
     dropdownCtx.toggle(!dropdownCtx.opening);
   };
 
-  return (
+  return tooltip ? (
+    <Tooltip text={tooltip} show={!dropdownCtx.opening}>
+      <StyledDropdownToggle ref={ref} onClick={handleClick} {...rest}>
+        {children}
+      </StyledDropdownToggle>
+    </Tooltip>
+  ) : (
     <StyledDropdownToggle ref={ref} onClick={handleClick} {...rest}>
       {children}
     </StyledDropdownToggle>
@@ -102,7 +110,9 @@ DropdownMenu.displayName = "DropdownMenu";
 const DropdownItem: React.FC<DropdownItemProps> = React.forwardRef<
   HTMLLIElement,
   DropdownItemProps
->(({ children, onSelect, ...rest }, ref) => {
+>(({ children, onSelect, as = "li", href, to, ...rest }, ref) => {
+  const Component = (href && "a") || (to && Link) || as;
+
   const dropdownCtx = React.useContext(DropdownContext);
 
   const handleClick = () => {
@@ -112,7 +122,7 @@ const DropdownItem: React.FC<DropdownItemProps> = React.forwardRef<
   };
 
   return (
-    <StyledDropdownItem ref={ref} onClick={handleClick} {...rest}>
+    <StyledDropdownItem as={Component} ref={ref} onClick={handleClick} {...rest}>
       {children}
     </StyledDropdownItem>
   );

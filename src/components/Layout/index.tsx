@@ -29,7 +29,7 @@ const Layout: React.FC<LayoutProps> = React.forwardRef<HTMLDivElement, LayoutPro
             </Navbar.Link>
             <Navbar.Link style={{ marginRight: 0 }}>
               <Dropdown>
-                <Dropdown.Toggle style={{ padding: 0 }}>
+                <Dropdown.Toggle style={{ padding: 0 }} tooltip="More">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 16 16"
