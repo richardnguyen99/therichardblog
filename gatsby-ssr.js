@@ -7,7 +7,7 @@ import "normalize.css";
 import GlobalStyle from "./src/components/GlobalStyle";
 
 // eslint-disable-next-line import/prefer-default-export
-export const wrapRootElement = ({ element }) => {
+export const wrapPageElement = ({ element }) => {
   return (
     <>
       <GlobalStyle />
