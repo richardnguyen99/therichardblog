@@ -8,10 +8,10 @@ exports[`<Index /> should match snapshot 1`] = `
         class="sc-gsTEea jEPedr"
       >
         <a
-          class="sc-hKgJUU sc-eCstlR keQQxc fkQSOg"
+          class="sc-hKgJUU sc-eCstlR keQQxc cueUSn"
           href="/"
         >
-          Richard's blog
+          The Richard's blog
         </a>
         <div
           class="sc-dlfnuX kqAJEM"
@@ -107,20 +107,213 @@ exports[`<Index /> should match snapshot 1`] = `
           PostPage
         </title>
         <section
-          class="sc-kEjbQP bmmreG"
+          class="sc-idOiZg cRVhMP"
         >
           <h1
-            class="sc-iqHYmW iXLnaM"
+            class="sc-dIUeWJ fnUcXX"
           >
             The latest from Richard.
-            <span
-              class="sc-crrszt JeRgZ"
-            >
-              |
-            </span>
           </h1>
         </section>
       </div>
+      <footer
+        class="sc-kEjbQP cclyCz"
+      >
+        <div
+          class="sc-iqHYmW hnJCEo"
+        >
+          <div
+            class="sc-crrszt jjFfkQ"
+          >
+            <div
+              class="sc-dQoVA oxzCN"
+            >
+              The Richard's blog
+            </div>
+            <div
+              class="sc-bqyKOL ggkAXq"
+            >
+              <div
+                class="sc-kstqJO"
+              >
+                <h4
+                  class="sc-hBEYId eBOXVv"
+                >
+                  Connection
+                </h4>
+                <ul
+                  class="sc-fodVek iOFkns"
+                >
+                  <li
+                    class="sc-fFucqa bFYFFk"
+                  >
+                    <a
+                      href="#"
+                    >
+                      Facebook
+                    </a>
+                  </li>
+                  <li
+                    class="sc-fFucqa bFYFFk"
+                  >
+                    <a
+                      href="#"
+                    >
+                      Facebook
+                    </a>
+                  </li>
+                  <li
+                    class="sc-fFucqa bFYFFk"
+                  >
+                    <a
+                      href="#"
+                    >
+                      Facebook
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div
+                class="sc-kstqJO"
+              >
+                <h4
+                  class="sc-hBEYId eBOXVv"
+                >
+                  Connection
+                </h4>
+                <ul
+                  class="sc-fodVek iOFkns"
+                >
+                  <li
+                    class="sc-fFucqa bFYFFk"
+                  >
+                    <a
+                      href="#"
+                    >
+                      Facebook
+                    </a>
+                  </li>
+                  <li
+                    class="sc-fFucqa bFYFFk"
+                  >
+                    <a
+                      href="#"
+                    >
+                      Facebook
+                    </a>
+                  </li>
+                  <li
+                    class="sc-fFucqa bFYFFk"
+                  >
+                    <a
+                      href="#"
+                    >
+                      Facebook
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div
+                class="sc-kstqJO"
+              >
+                <h4
+                  class="sc-hBEYId eBOXVv"
+                >
+                  Connection
+                </h4>
+                <ul
+                  class="sc-fodVek iOFkns"
+                >
+                  <li
+                    class="sc-fFucqa bFYFFk"
+                  >
+                    <a
+                      href="#"
+                    >
+                      Facebook
+                    </a>
+                  </li>
+                  <li
+                    class="sc-fFucqa bFYFFk"
+                  >
+                    <a
+                      href="#"
+                    >
+                      Facebook
+                    </a>
+                  </li>
+                  <li
+                    class="sc-fFucqa bFYFFk"
+                  >
+                    <a
+                      href="#"
+                    >
+                      Facebook
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div
+                class="sc-kstqJO"
+              >
+                <h4
+                  class="sc-hBEYId eBOXVv"
+                >
+                  Connection
+                </h4>
+                <ul
+                  class="sc-fodVek iOFkns"
+                >
+                  <li
+                    class="sc-fFucqa bFYFFk"
+                  >
+                    <a
+                      href="#"
+                    >
+                      Facebook
+                    </a>
+                  </li>
+                  <li
+                    class="sc-fFucqa bFYFFk"
+                  >
+                    <a
+                      href="#"
+                    >
+                      Facebook
+                    </a>
+                  </li>
+                  <li
+                    class="sc-fFucqa bFYFFk"
+                  >
+                    <a
+                      href="#"
+                    >
+                      Facebook
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div
+            class="sc-bkzYnD glPmbI"
+          >
+            <span>
+              <img
+                alt="Made by Richard with love"
+                src="https://img.shields.io/static/v1?label=Made by Richard&message=with ♥&color=red"
+              />
+            </span>
+            <span>
+              <a
+                href="https://github.com/richardnguyen99/therichardblog/"
+              >
+                Github repo
+              </a>
+            </span>
+          </div>
+        </div>
+      </footer>
     </div>
   </main>
 </div>

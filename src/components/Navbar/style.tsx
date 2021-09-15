@@ -53,6 +53,8 @@ export const StyledNavbarLink = styled.a`
 export const StyledNavbarBrand = styled(StyledNavbarLink)`
   display: flex;
   align-items: center;
+  font-size: 24px;
+  font-family: "Abril Fatface";
 
   svg,
   .icon {

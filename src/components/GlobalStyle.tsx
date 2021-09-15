@@ -6,6 +6,7 @@
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
+  @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
 
   html, body {
     font-size: 16px;

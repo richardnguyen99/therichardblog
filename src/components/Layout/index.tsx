@@ -10,6 +10,7 @@ import { LayoutProps } from "./type";
 import { StyledContainer } from "./style";
 import Navbar from "@components/Navbar";
 import Dropdown from "@components/Dropdown";
+import Footer from "@components/Footer";
 
 const Layout: React.FC<LayoutProps> = React.forwardRef<HTMLDivElement, LayoutProps>(
   ({ children, ...rest }, ref) => {
@@ -18,7 +19,7 @@ const Layout: React.FC<LayoutProps> = React.forwardRef<HTMLDivElement, LayoutPro
     return (
       <div ref={ref} {...rest}>
         <Navbar>
-          <Navbar.Brand to="/">Richard&apos;s blog</Navbar.Brand>
+          <Navbar.Brand to="/">The Richard&apos;s blog</Navbar.Brand>
           <Navbar.Item full>
             <Navbar.Link to="/about">About</Navbar.Link>
             <Navbar.Link to="/post">About</Navbar.Link>
@@ -50,6 +51,81 @@ const Layout: React.FC<LayoutProps> = React.forwardRef<HTMLDivElement, LayoutPro
           </Navbar.Item>
         </Navbar>
         <div id="content">{children}</div>
+        <Footer>
+          <Footer.Grid>
+            <Footer.Brand>The Richard&apos;s blog</Footer.Brand>
+            <Footer.Columns>
+              <Footer.Column>
+                <Footer.Header>Connection</Footer.Header>
+                <Footer.Group>
+                  <Footer.Item>
+                    <a href="#">Facebook</a>
+                  </Footer.Item>
+                  <Footer.Item>
+                    <a href="#">Facebook</a>
+                  </Footer.Item>
+                  <Footer.Item>
+                    <a href="#">Facebook</a>
+                  </Footer.Item>
+                </Footer.Group>
+              </Footer.Column>
+              <Footer.Column>
+                <Footer.Header>Connection</Footer.Header>
+                <Footer.Group>
+                  <Footer.Item>
+                    <a href="#">Facebook</a>
+                  </Footer.Item>
+                  <Footer.Item>
+                    <a href="#">Facebook</a>
+                  </Footer.Item>
+                  <Footer.Item>
+                    <a href="#">Facebook</a>
+                  </Footer.Item>
+                </Footer.Group>
+              </Footer.Column>
+              <Footer.Column>
+                <Footer.Header>Connection</Footer.Header>
+                <Footer.Group>
+                  <Footer.Item>
+                    <a href="#">Facebook</a>
+                  </Footer.Item>
+                  <Footer.Item>
+                    <a href="#">Facebook</a>
+                  </Footer.Item>
+                  <Footer.Item>
+                    <a href="#">Facebook</a>
+                  </Footer.Item>
+                </Footer.Group>
+              </Footer.Column>
+              <Footer.Column>
+                <Footer.Header>Connection</Footer.Header>
+                <Footer.Group>
+                  <Footer.Item>
+                    <a href="#">Facebook</a>
+                  </Footer.Item>
+                  <Footer.Item>
+                    <a href="#">Facebook</a>
+                  </Footer.Item>
+                  <Footer.Item>
+                    <a href="#">Facebook</a>
+                  </Footer.Item>
+                </Footer.Group>
+              </Footer.Column>
+            </Footer.Columns>
+          </Footer.Grid>
+          <Footer.Bottom>
+            <span>
+              <img
+                style={{}}
+                src="https://img.shields.io/static/v1?label=Made by Richard&message=with ♥&color=red"
+                alt="Made by Richard with love"
+              />
+            </span>
+            <span>
+              <a href="https://github.com/richardnguyen99/therichardblog/">Github repo</a>
+            </span>
+          </Footer.Bottom>
+        </Footer>
       </div>
     );
   }
