@@ -10,6 +10,7 @@ export const StyledSectionHeadingWrapper = styled.section`
   justify-content: flex-start;
   align-items: flex-start;
   margin: 2.5rem;
+  margin-top: 7.5rem;
 
   @media screen and (min-width: 768px) {
     margin: 7.5rem;

@@ -9,13 +9,26 @@ import styled from "styled-components";
 
 export const StyledNavbar = styled.nav`
   display: flex;
-  padding: 1rem;
+  padding: 1rem 0;
   font-size: 14px;
   line-height: 1.5;
   color: rgba(255, 255, 255, 1); // TODO: Implement color text for light theme
   background-color: #18181b; // TODO: Implement color background for light theme
   align-items: center;
   flex-wrap: nowrap;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+
+  :first-child {
+    margin-left: 32px;
+  }
+
+  :last-child {
+    margin-right: 32px;
+  }
 `;
 
 export const StyledNavbarItem = styled.div<{ full?: boolean }>`
@@ -23,10 +36,6 @@ export const StyledNavbarItem = styled.div<{ full?: boolean }>`
   margin-right: 1rem;
   align-self: center;
   flex-wrap: nowrap;
-
-  &:last-child {
-    margin-right: 0;
-  }
 
   ${(props) => props.full && "flex: auto;"}
 `;
