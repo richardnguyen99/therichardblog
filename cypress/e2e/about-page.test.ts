@@ -1,13 +1,13 @@
 /// <reference types="Cypress" />
 
 beforeEach(() => {
-  cy.visit("/");
+  cy.visit("/about");
 });
 
-describe("Index page", () => {
-  it("should visist the index page", () => {
-    cy.title().should("eq", "Home - The Richard's blog");
-    cy.contains("The latest from Richard.");
+describe("About page", () => {
+  it("should visist the about page", () => {
+    cy.title().should("eq", "About - The Richard's blog");
+    cy.contains("About Richard");
   });
 
   it("should contains a blinking cursor on wide screens", () => {
@@ -21,12 +21,12 @@ describe("Index page", () => {
   });
 
   it("should work with internal links", () => {
-    cy.get("nav").contains("About").click();
-    cy.location("pathname").should("eq", "/about");
-    cy.go("back");
-
     cy.get("nav").contains("Post").click();
     cy.location("pathname").should("eq", "/post");
+    cy.go("back");
+
+    cy.get("nav").contains("The Richard's blog").click();
+    cy.location("pathname").should("eq", "/");
     cy.go("back");
   });
 
