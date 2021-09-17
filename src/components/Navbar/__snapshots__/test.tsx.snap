@@ -3,7 +3,7 @@
 exports[`<Navbar /> should match snapshot 1`] = `
 <div>
   <nav
-    class="sc-bdfBQB MKTIf"
+    class="sc-bdfBQB hsLRWa"
   >
     <a
       class="sc-dlfnuX sc-hKgJUU iWCnRH ktmAJW"
@@ -12,7 +12,7 @@ exports[`<Navbar /> should match snapshot 1`] = `
       Richard's blog
     </a>
     <div
-      class="sc-gsTEea evDERg"
+      class="sc-gsTEea jYRocp"
     >
       <a
         class="sc-dlfnuX iWCnRH"
@@ -28,7 +28,7 @@ exports[`<Navbar /> should match snapshot 1`] = `
       </a>
     </div>
     <div
-      class="sc-gsTEea hhKWjN"
+      class="sc-gsTEea gMWZKU"
     >
       <a
         class="sc-dlfnuX iWCnRH"

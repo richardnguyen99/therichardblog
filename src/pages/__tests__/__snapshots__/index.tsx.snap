@@ -5,16 +5,17 @@ exports[`<Index /> should match snapshot 1`] = `
   <main>
     <div>
       <nav
-        class="sc-gsTEea jEPedr"
+        class="sc-gsTEea jkQlFK"
       >
         <a
+          aria-current="page"
           class="sc-hKgJUU sc-eCstlR keQQxc cueUSn"
           href="/"
         >
           The Richard's blog
         </a>
         <div
-          class="sc-dlfnuX kqAJEM"
+          class="sc-dlfnuX bIubGl"
         >
           <a
             class="sc-hKgJUU keQQxc"
@@ -26,11 +27,11 @@ exports[`<Index /> should match snapshot 1`] = `
             class="sc-hKgJUU keQQxc"
             href="/post"
           >
-            About
+            Post
           </a>
         </div>
         <div
-          class="sc-dlfnuX bxzGnt"
+          class="sc-dlfnuX jFdrKc"
         >
           <a
             class="sc-hKgJUU keQQxc"
@@ -41,7 +42,6 @@ exports[`<Index /> should match snapshot 1`] = `
           <span
             class="sc-hKgJUU keQQxc"
             href=""
-            style="margin-right: 0px;"
             to=""
           >
             <div
@@ -103,11 +103,8 @@ exports[`<Index /> should match snapshot 1`] = `
       <div
         id="content"
       >
-        <title>
-          PostPage
-        </title>
         <section
-          class="sc-idOiZg cRVhMP"
+          class="sc-idOiZg kAXVqK"
         >
           <h1
             class="sc-dIUeWJ fnUcXX"

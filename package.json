@@ -23,6 +23,7 @@
     "test:e2e": "cypress run"
   },
   "dependencies": {
+    "@gatsbyjs/reach-router": "^1.3.6",
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
     "gatsby": "^3.13.0",
@@ -31,6 +32,7 @@
     "gatsby-plugin-image": "^1.13.0",
     "gatsby-plugin-manifest": "^3.13.0",
     "gatsby-plugin-mdx": "^2.13.0",
+    "gatsby-plugin-offline": "^4.13.0",
     "gatsby-plugin-react-helmet": "^4.13.0",
     "gatsby-plugin-sharp": "^3.13.0",
     "gatsby-plugin-sitemap": "^4.9.0",

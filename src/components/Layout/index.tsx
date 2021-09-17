@@ -22,13 +22,13 @@ const Layout: React.FC<LayoutProps> = React.forwardRef<HTMLDivElement, LayoutPro
           <Navbar.Brand to="/">The Richard&apos;s blog</Navbar.Brand>
           <Navbar.Item full>
             <Navbar.Link to="/about">About</Navbar.Link>
-            <Navbar.Link to="/post">About</Navbar.Link>
+            <Navbar.Link to="/post">Post</Navbar.Link>
           </Navbar.Item>
           <Navbar.Item>
             <Navbar.Link href="https://github.com/richardnguyen99/therichardblog">
               Github
             </Navbar.Link>
-            <Navbar.Link style={{ marginRight: 0 }}>
+            <Navbar.Link>
               <Dropdown>
                 <Dropdown.Toggle style={{ padding: 0 }} tooltip="More">
                   <svg
