@@ -21,12 +21,12 @@ describe("About page", () => {
   });
 
   it("should work with internal links", () => {
-    cy.get("nav").contains("About").click();
-    cy.location("pathname").should("eq", "/about");
-    cy.go("back");
-
     cy.get("nav").contains("Post").click();
     cy.location("pathname").should("eq", "/post");
+    cy.go("back");
+
+    cy.get("nav").contains("The Richard's blog").click();
+    cy.location("pathname").should("eq", "/");
     cy.go("back");
   });
 

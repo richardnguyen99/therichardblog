@@ -25,8 +25,8 @@ describe("Post page", () => {
     cy.location("pathname").should("eq", "/about");
     cy.go("back");
 
-    cy.get("nav").contains("Post").click();
-    cy.location("pathname").should("eq", "/post");
+    cy.get("nav").contains("The Richard's blog").click();
+    cy.location("pathname").should("eq", "/");
     cy.go("back");
   });
 
