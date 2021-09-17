@@ -51,4 +51,22 @@ describe("<Index />", () => {
 
     expect(container).toMatchSnapshot();
   });
+
+  it("should contains a nav component", () => {
+    const { container, getByRole } = render(<IndexPage />);
+
+    expect(getByRole("navigation")).toBeInTheDocument();
+  });
+
+  it("should contains a footer component", () => {
+    const { container, getByRole } = render(<IndexPage />);
+
+    expect(getByRole("contentinfo")).toBeInTheDocument();
+  });
+
+  it("should display the page heading", () => {
+    const { getByText } = render(<IndexPage />);
+
+    expect(getByText("The latest from Richard.")).toBeInTheDocument();
+  });
 });
