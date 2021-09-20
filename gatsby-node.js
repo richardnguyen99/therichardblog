@@ -24,3 +24,68 @@ exports.onCreateWebpackConfig = ({ actions, stage, loaders }) => {
     },
   });
 };
+
+exports.onCreateNode = ({ node, actions, getNode }) => {
+  const { createNodeField } = actions;
+
+  if (node.internal.type === "Mdx") {
+    const value = createFilePath({ node, getNode });
+
+    createNodeField({
+      name: "slug",
+      node,
+      value: `/post${value}`,
+    });
+  }
+};
+
+exports.createPages = async ({ graphql, actions, reporter }) => {
+  const { createPage } = actions;
+
+  const result = await graphql(`
+    query MyQuery {
+      allMdx {
+        edges {
+          node {
+            id
+            frontmatter {
+              categories
+              created
+              description
+              stack
+              title
+            }
+            fields {
+              slug
+            }
+            timeToRead
+            wordCount {
+              paragraphs
+              sentences
+              words
+            }
+          }
+        }
+      }
+    }
+  `);
+
+  if (result.errors) {
+    reporter.panicOnBuild(`🚨  ERROR: Loading "createPages" query`);
+  }
+
+  const posts = result.data.allMdx.edges;
+  const tags = new Set();
+
+  posts.forEach(({ node }, index) => {
+    node.frontmatter.stack.forEach((tag) => {
+      tags.add(tag);
+    });
+
+    createPage({
+      path: node.fields.slug,
+      component: path.resolve("./src/components/Template/index.tsx"),
+      context: { id: node.id },
+    });
+  });
+};
