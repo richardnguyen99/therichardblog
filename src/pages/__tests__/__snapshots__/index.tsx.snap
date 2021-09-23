@@ -5,7 +5,7 @@ exports[`<Index /> should match snapshot 1`] = `
   <main>
     <div>
       <nav
-        class="sc-gsTEea jkQlFK"
+        class="sc-gsTEea cpiqBL"
       >
         <a
           aria-current="page"
@@ -15,7 +15,7 @@ exports[`<Index /> should match snapshot 1`] = `
           The Richard's blog
         </a>
         <div
-          class="sc-dlfnuX bIubGl"
+          class="sc-dlfnuX DrHGo"
         >
           <a
             class="sc-hKgJUU keQQxc"
@@ -31,7 +31,7 @@ exports[`<Index /> should match snapshot 1`] = `
           </a>
         </div>
         <div
-          class="sc-dlfnuX jFdrKc"
+          class="sc-dlfnuX egtcNB"
         >
           <a
             class="sc-hKgJUU keQQxc"

@@ -22,7 +22,7 @@ export const StyledNavbar = styled.nav`
   left: 0;
   width: 100%;
 
-  :first-child {
+  a:first-child {
     margin-left: 32px;
   }
 
@@ -38,6 +38,10 @@ export const StyledNavbarItem = styled.div<{ full?: boolean }>`
   flex-wrap: nowrap;
 
   ${(props) => props.full && "flex: auto;"}
+
+  a:last-child, span:last-child {
+    margin-right: 0;
+  }
 `;
 
 export const StyledNavbarLink = styled.a`

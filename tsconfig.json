@@ -22,9 +22,11 @@
       "@helper/*": ["src/helper/*"],
       "@helper": ["src/helper"],
       "@pages/*": ["src/pages/*"],
-      "@pages": ["src/pages"]
+      "@pages": ["src/pages"],
+      "@generated/*": ["src/generated/*"],
+      "@generated": ["src/generated"]
     }
   },
   "include": ["src/**/*.ts", "src/**/*.tsx"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "**/generated/*"]
 }

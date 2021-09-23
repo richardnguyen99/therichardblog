@@ -6,16 +6,19 @@
 import * as React from "react";
 import { graphql } from "gatsby";
 import { MDXProvider } from "@mdx-js/react";
-
-import Layout from "@components/Layout";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 
-const PostTemplate: React.FC<{ data: Record<string, any> }> = ({ data: { mdx } }) => {
+import Layout from "@components/Layout";
+import { PostQuery } from "@generated/graphql";
+
+const PostTemplate: React.FC<{ data: PostQuery }> = ({ data: { mdx } }) => {
   return (
     <Layout>
-      <MDXProvider>
-        <MDXRenderer headings={mdx.headings}>{mdx.body}</MDXRenderer>
-      </MDXProvider>
+      <Layout.Container style={{ marginTop: "6rem" }}>
+        <MDXProvider>
+          <MDXRenderer headings={mdx.headings}>{mdx.body}</MDXRenderer>
+        </MDXProvider>
+      </Layout.Container>
     </Layout>
   );
 };
