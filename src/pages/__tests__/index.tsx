@@ -4,9 +4,17 @@
 
 import * as React from "react";
 import { render } from "@testing-library/react";
-import { StaticQuery } from "gatsby";
 
 import IndexPage from "../index";
+import NavbarContext from "@components/Navbar/context";
+
+const dummy = () => {
+  return;
+};
+
+const customRender = (ui, { providerProps, ...renderOptions }) => {
+  return render(<NavbarContext.Provider {...providerProps}>{ui}</NavbarContext.Provider>);
+};
 
 const mockUseLocationValue = {
   pathname: "/",
@@ -47,25 +55,73 @@ jest.mock("gatsby", () => ({
 
 describe("<Index />", () => {
   it("should match snapshot", () => {
-    const { container } = render(<IndexPage />);
+    const { container } = customRender(<IndexPage />, {
+      providerProps: {
+        value: {
+          active: {
+            pathname: "/",
+            top: 76,
+            left: 0,
+            width: 0,
+            onActiveChange: dummy,
+          },
+        },
+      },
+    });
 
     expect(container).toMatchSnapshot();
   });
 
   it("should contains a nav component", () => {
-    const { container, getByRole } = render(<IndexPage />);
+    const { getByRole } = customRender(<IndexPage />, {
+      providerProps: {
+        value: {
+          active: {
+            pathname: "/",
+            top: 76,
+            left: 0,
+            width: 0,
+            onActiveChange: dummy,
+          },
+        },
+      },
+    });
 
     expect(getByRole("navigation")).toBeInTheDocument();
   });
 
   it("should contains a footer component", () => {
-    const { container, getByRole } = render(<IndexPage />);
+    const { getByRole } = customRender(<IndexPage />, {
+      providerProps: {
+        value: {
+          active: {
+            pathname: "/",
+            top: 76,
+            left: 0,
+            width: 0,
+            onActiveChange: dummy,
+          },
+        },
+      },
+    });
 
     expect(getByRole("contentinfo")).toBeInTheDocument();
   });
 
   it("should display the page heading", () => {
-    const { getByText } = render(<IndexPage />);
+    const { getByText } = customRender(<IndexPage />, {
+      providerProps: {
+        value: {
+          active: {
+            pathname: "/",
+            top: 76,
+            left: 0,
+            width: 0,
+            onActiveChange: dummy,
+          },
+        },
+      },
+    });
 
     expect(getByText("The latest from Richard.")).toBeInTheDocument();
   });

@@ -3,39 +3,43 @@
 exports[`<Navbar /> should match snapshot 1`] = `
 <div>
   <nav
-    class="sc-bdfBQB bnJwLn"
+    class="sc-bdfBQB ldFzRU"
   >
-    <a
-      class="sc-dlfnuX sc-hKgJUU iWCnRH ktmAJW"
-      href="/"
-    >
-      Richard's blog
-    </a>
     <div
-      class="sc-gsTEea fgzYSc"
+      class="sc-gsTEea eUmaRI"
     >
       <a
-        class="sc-dlfnuX iWCnRH"
-        href="/about"
+        class="sc-eCstlR sc-jSgvzq jQdtAh hgJpQr"
+        href="/"
       >
-        About
+        Richard's blog
       </a>
-      <a
-        class="sc-dlfnuX iWCnRH"
-        href="/post"
+      <div
+        class="sc-hKgJUU grvUcg"
       >
-        About
-      </a>
-    </div>
-    <div
-      class="sc-gsTEea bTdZoJ"
-    >
-      <a
-        class="sc-dlfnuX iWCnRH"
-        href="https://github.com/richardnguyen99/therichardblog"
+        <a
+          class="sc-eCstlR jQdtAh"
+          href="/about"
+        >
+          About
+        </a>
+        <a
+          class="sc-eCstlR jQdtAh"
+          href="/post"
+        >
+          About
+        </a>
+      </div>
+      <div
+        class="sc-hKgJUU dLRrWN"
       >
-        Github
-      </a>
+        <a
+          class="sc-eCstlR jQdtAh"
+          href="https://github.com/richardnguyen99/therichardblog"
+        >
+          Github
+        </a>
+      </div>
     </div>
   </nav>
 </div>

@@ -28,10 +28,13 @@ export const StyledFooterGridWrapper = styled.div`
 `;
 
 export const StyledFooterGrid = styled.div`
-  grid-column: 2 / -2;
+  grid-column: 1 / -1;
   display: grid;
-  grid-template-columns: 4fr 8fr;
+  grid-template-columns: 2fr 8fr;
   margin-bottom: 4rem;
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
 
   @media screen and (max-width: 1023px) {
     grid-template-columns: 1fr;

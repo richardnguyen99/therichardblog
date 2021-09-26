@@ -11,20 +11,42 @@ import { render } from "@testing-library/react";
 
 import Navbar from "./index";
 import Icon from "../icons";
+import NavbarContext from "./context";
+
+const dummy = () => {
+  return;
+};
+
+const customRender = (ui, { providerProps, ...renderOptions }) => {
+  return render(<NavbarContext.Provider {...providerProps}>{ui}</NavbarContext.Provider>);
+};
 
 describe("<Navbar />", () => {
   it("should match snapshot", () => {
     const { container } = render(
-      <Navbar>
-        <Navbar.Brand to="/">Richard&apos;s blog</Navbar.Brand>
-        <Navbar.Item full>
-          <Navbar.Link to="/about">About</Navbar.Link>
-          <Navbar.Link to="/post">About</Navbar.Link>
-        </Navbar.Item>
-        <Navbar.Item>
-          <Navbar.Link href="https://github.com/richardnguyen99/therichardblog">Github</Navbar.Link>
-        </Navbar.Item>
-      </Navbar>
+      <NavbarContext.Provider
+        value={{
+          active: {
+            pathname: "/",
+            top: 76,
+            left: 0,
+            width: 0,
+            onActiveChange: dummy,
+          },
+        }}>
+        <Navbar>
+          <Navbar.Brand to="/">Richard&apos;s blog</Navbar.Brand>
+          <Navbar.Item full>
+            <Navbar.Link to="/about">About</Navbar.Link>
+            <Navbar.Link to="/post">About</Navbar.Link>
+          </Navbar.Item>
+          <Navbar.Item>
+            <Navbar.Link href="https://github.com/richardnguyen99/therichardblog">
+              Github
+            </Navbar.Link>
+          </Navbar.Item>
+        </Navbar>
+      </NavbarContext.Provider>
     );
 
     expect(container).toMatchSnapshot();
@@ -47,13 +69,40 @@ describe("<Navbar.Item>", () => {
 
 describe("<Navbar.Link>", () => {
   it("should not be a flex container", () => {
-    const { container } = render(<Navbar.Link to="/">Link</Navbar.Link>);
+    const { container } = customRender(<Navbar.Link>Test</Navbar.Link>, {
+      providerProps: {
+        value: {
+          active: {
+            pathname: "/",
+            top: 76,
+            left: 0,
+            width: 0,
+            onActiveChange: dummy,
+          },
+        },
+      },
+    });
 
     expect(container.firstChild).not.toHaveStyle("display: flex");
   });
 
   it("should render properly with link tag", () => {
-    const { container, getByText, getByRole } = render(<Navbar.Link to="/">Link</Navbar.Link>);
+    const { container, getByText, getByRole } = customRender(
+      <Navbar.Link to="/">Link</Navbar.Link>,
+      {
+        providerProps: {
+          value: {
+            active: {
+              pathname: "/",
+              top: 76,
+              left: 0,
+              width: 0,
+              onActiveChange: dummy,
+            },
+          },
+        },
+      }
+    );
 
     expect(getByText(/Link/i).closest("a")).toBeInTheDocument();
     expect(getByRole("link")).toBeInTheDocument();
@@ -62,7 +111,19 @@ describe("<Navbar.Link>", () => {
   });
 
   it("should render properly with span tag", () => {
-    const { container, getByText } = render(<Navbar.Link>Link</Navbar.Link>);
+    const { container, getByText } = customRender(<Navbar.Link>Link</Navbar.Link>, {
+      providerProps: {
+        value: {
+          active: {
+            pathname: "/",
+            top: 76,
+            left: 0,
+            width: 0,
+            onActiveChange: dummy,
+          },
+        },
+      },
+    });
 
     expect(getByText(/Link/i)).toBeInTheDocument();
     expect(container.firstChild.nodeName).toBe("SPAN");
@@ -71,12 +132,39 @@ describe("<Navbar.Link>", () => {
 
 describe("<Navbar.Brand>", () => {
   it("should be a flex container", () => {
-    const { container } = render(<Navbar.Brand>Test</Navbar.Brand>);
+    const { container } = customRender(<Navbar.Brand>Test</Navbar.Brand>, {
+      providerProps: {
+        value: {
+          active: {
+            pathname: "/",
+            top: 76,
+            left: 0,
+            width: 0,
+            onActiveChange: dummy,
+          },
+        },
+      },
+    });
 
     expect(container.firstChild).toHaveStyle("display: flex");
   });
   it("should render properly with link tag", () => {
-    const { container, getByText, getByRole } = render(<Navbar.Brand to="/">Link</Navbar.Brand>);
+    const { container, getByText, getByRole } = customRender(
+      <Navbar.Brand to="/">Link</Navbar.Brand>,
+      {
+        providerProps: {
+          value: {
+            active: {
+              pathname: "/",
+              top: 76,
+              left: 0,
+              width: 0,
+              onActiveChange: dummy,
+            },
+          },
+        },
+      }
+    );
 
     expect(getByText(/Link/i).closest("a")).toBeInTheDocument();
     expect(getByRole("link")).toBeInTheDocument();
@@ -85,18 +173,43 @@ describe("<Navbar.Brand>", () => {
   });
 
   it("should render properly with span tag", () => {
-    const { container, getByText } = render(<Navbar.Brand>Link</Navbar.Brand>);
+    const { container, getByText } = customRender(<Navbar.Brand>Link</Navbar.Brand>, {
+      providerProps: {
+        value: {
+          active: {
+            pathname: "/",
+            top: 76,
+            left: 0,
+            width: 0,
+            onActiveChange: dummy,
+          },
+        },
+      },
+    });
 
     expect(getByText(/Link/i)).toBeInTheDocument();
     expect(container.firstChild.nodeName).toBe("SPAN");
   });
 
   it("should render with icon child", () => {
-    const { container, getByText } = render(
+    const { container, getByText } = customRender(
       <Navbar.Brand href="https://github.com/richardnguyen99/therichardblog">
         <Icon.Github />
         Github
-      </Navbar.Brand>
+      </Navbar.Brand>,
+      {
+        providerProps: {
+          value: {
+            active: {
+              pathname: "/",
+              top: 76,
+              left: 0,
+              width: 0,
+              onActiveChange: dummy,
+            },
+          },
+        },
+      }
     );
 
     expect(container.firstChild.firstChild.nodeName).toBe("svg");
