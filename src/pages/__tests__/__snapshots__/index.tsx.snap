@@ -103,6 +103,10 @@ exports[`<Index /> should match snapshot 1`] = `
             </span>
           </div>
         </div>
+        <div
+          class="sc-hKgJUU DNWkX"
+          style="display: none; top: 76px; width: 0px; left: 0px;"
+        />
       </nav>
       <div
         id="content"

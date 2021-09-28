@@ -129,6 +129,7 @@ const Navbar: React.FC<NavbarProps> = React.forwardRef<HTMLElement, NavbarProps>
     return (
       <StyledNavbar ref={mergedRef} {...rest}>
         <StyledNavbarContainer>{children}</StyledNavbarContainer>
+        <ActiveLink />
       </StyledNavbar>
     );
   }
