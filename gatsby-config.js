@@ -1,3 +1,5 @@
+const path = require("path");
+
 module.exports = {
   siteMetadata: {
     siteUrl: "https://www.therichardblog.com",
@@ -28,7 +30,30 @@ module.exports = {
         display: "minimal-ui",
       },
     },
-    "gatsby-plugin-mdx",
+    {
+      resolve: "gatsby-plugin-mdx",
+      options: {
+        extensions: [".mdx", ".md"],
+        remarkPlugins: [],
+        gatsbyRemarkPlugins: [
+          "gatsby-remark-autolink-headers",
+          {
+            resolve: "gatsby-remark-images",
+            options: {
+              maxWidth: 560,
+            },
+          },
+        ],
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "posts",
+        path: path.join(__dirname, "content", "posts"),
+      },
+      __key: "posts",
+    },
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {

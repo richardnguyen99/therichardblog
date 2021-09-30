@@ -9,7 +9,6 @@ import styled from "styled-components";
 
 export const StyledNavbar = styled.nav`
   display: flex;
-  padding: 1rem 0;
   font-size: 14px;
   line-height: 1.5;
   color: rgba(255, 255, 255, 1); // TODO: Implement color text for light theme
@@ -21,23 +20,38 @@ export const StyledNavbar = styled.nav`
   right: 0;
   left: 0;
   width: 100%;
+`;
 
-  :first-child {
-    margin-left: 32px;
-  }
+export const StyledNavbarContainer = styled.div`
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  width: 100%;
+  height: 5rem;
+  margin-right: auto;
+  margin-left: auto;
+`;
 
-  :last-child {
-    margin-right: 32px;
-  }
+export const StyledNavbarActiveLink = styled.div`
+  position: fixed;
+  z-index: 3;
+  background: rgba(255, 255, 255, 1);
+  height: 4px;
+  transition: all 0.2s ease-in;
 `;
 
 export const StyledNavbarItem = styled.div<{ full?: boolean }>`
   display: flex;
-  margin-right: 1rem;
   align-self: center;
   flex-wrap: nowrap;
 
   ${(props) => props.full && "flex: auto;"}
+
+  a:last-child, span:last-child {
+    margin-right: 0;
+  }
 `;
 
 export const StyledNavbarLink = styled.a`
@@ -67,7 +81,6 @@ export const StyledNavbarBrand = styled(StyledNavbarLink)`
 
   svg,
   .icon {
-    margin-right: 8px;
     fill: currentColor;
     overflow: visible;
   }

@@ -5,144 +5,152 @@ exports[`<Index /> should match snapshot 1`] = `
   <main>
     <div>
       <nav
-        class="sc-gsTEea jkQlFK"
+        class="sc-gsTEea dgGraA"
       >
-        <a
-          aria-current="page"
-          class="sc-hKgJUU sc-eCstlR keQQxc cueUSn"
-          href="/"
-        >
-          The Richard's blog
-        </a>
         <div
-          class="sc-dlfnuX bIubGl"
+          class="sc-dlfnuX jPvAmc"
         >
           <a
-            class="sc-hKgJUU keQQxc"
-            href="/about"
+            aria-current="page"
+            class="sc-jSgvzq sc-gKseQn lmTSet eEosdZ"
+            href="/"
           >
-            About
+            The Richard's blog
           </a>
-          <a
-            class="sc-hKgJUU keQQxc"
-            href="/post"
+          <div
+            class="sc-eCstlR lfkxJZ"
           >
-            Post
-          </a>
-        </div>
-        <div
-          class="sc-dlfnuX jFdrKc"
-        >
-          <a
-            class="sc-hKgJUU keQQxc"
-            href="https://github.com/richardnguyen99/therichardblog"
+            <a
+              class="sc-jSgvzq lmTSet"
+              href="/about"
+            >
+              About
+            </a>
+            <a
+              class="sc-jSgvzq lmTSet"
+              href="/post"
+            >
+              Post
+            </a>
+          </div>
+          <div
+            class="sc-eCstlR eRDLs"
           >
-            Github
-          </a>
-          <span
-            class="sc-hKgJUU keQQxc"
-            href=""
-            to=""
-          >
-            <div
-              class="sc-jSgvzq hTFgyW"
+            <a
+              class="sc-jSgvzq lmTSet"
+              href="https://github.com/richardnguyen99/therichardblog"
+            >
+              Github
+            </a>
+            <span
+              class="sc-jSgvzq lmTSet"
+              href=""
+              to=""
             >
               <div
-                class="sc-pGacB dHoZoM"
+                class="sc-iBPTik bUenXA"
               >
                 <div
-                  class="sc-jrAFXE lhdLbn"
-                  style="opacity: 0;"
+                  class="sc-kEjbQP zinsM"
                 >
-                  More
-                </div>
-                <div>
-                  <button
-                    class="sc-iBPTik sBHNH"
-                    style="padding: 0px;"
+                  <div
+                    class="sc-iqHYmW dEJZyq"
+                    style="opacity: 0;"
                   >
-                    <svg
-                      fill="white"
-                      fill-rule="evenodd"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      width="16"
-                      xmlns="http://www.w3.org/2000/svg"
+                    More
+                  </div>
+                  <div>
+                    <button
+                      class="sc-pGacB kyGELd"
+                      style="padding: 0px;"
                     >
-                      <path
-                        d="M8 9a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM1.5 9a1.5 1.5 0 100-3 1.5 1.5 0 000 3zm13 0a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"
-                      />
-                    </svg>
-                  </button>
+                      <svg
+                        fill="white"
+                        fill-rule="evenodd"
+                        height="16"
+                        viewBox="0 0 16 16"
+                        width="16"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M8 9a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM1.5 9a1.5 1.5 0 100-3 1.5 1.5 0 000 3zm13 0a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"
+                        />
+                      </svg>
+                    </button>
+                  </div>
                 </div>
+                <ul
+                  class="sc-fubCzh GdjJR southwest"
+                  style="opacity: 0; display: false;"
+                >
+                  <li
+                    class="sc-jrAFXE hJCAtD"
+                  >
+                    Tags
+                  </li>
+                  <li
+                    class="sc-jrAFXE hJCAtD"
+                  >
+                    Tags
+                  </li>
+                  <li
+                    class="sc-jrAFXE hJCAtD"
+                  >
+                    Tags
+                  </li>
+                </ul>
               </div>
-              <ul
-                class="sc-gKseQn fsukdw southwest"
-                style="opacity: 0; display: false;"
-              >
-                <li
-                  class="sc-fubCzh kJPbRp"
-                >
-                  Tags
-                </li>
-                <li
-                  class="sc-fubCzh kJPbRp"
-                >
-                  Tags
-                </li>
-                <li
-                  class="sc-fubCzh kJPbRp"
-                >
-                  Tags
-                </li>
-              </ul>
-            </div>
-          </span>
+            </span>
+          </div>
         </div>
+        <div
+          class="sc-hKgJUU DNWkX"
+          style="display: none; top: 76px; width: 0px; left: 0px;"
+        />
       </nav>
       <div
         id="content"
       >
         <section
-          class="sc-idOiZg kAXVqK"
+          class="sc-hHfuMS jlgQYN"
         >
           <h1
-            class="sc-dIUeWJ fnUcXX"
+            class="sc-dmlqKv GgidW"
           >
             The latest from Richard.
           </h1>
         </section>
       </div>
       <footer
-        class="sc-kEjbQP cclyCz"
+        class="sc-crrszt bRxQMy"
       >
         <div
-          class="sc-iqHYmW hnJCEo"
+          class="sc-dQoVA uTcuO"
         >
           <div
-            class="sc-crrszt jjFfkQ"
+            class="sc-bqyKOL fnObYe"
           >
             <div
-              class="sc-dQoVA oxzCN"
+              class="sc-kstqJO khiLwQ"
             >
               The Richard's blog
             </div>
             <div
-              class="sc-bqyKOL ggkAXq"
+              class="sc-hBEYId bEpSCn"
             >
               <div
-                class="sc-kstqJO"
+                class="sc-fodVek"
               >
                 <h4
-                  class="sc-hBEYId eBOXVv"
+                  class="sc-fFucqa fUsbUe"
                 >
                   Connection
                 </h4>
                 <ul
-                  class="sc-fodVek iOFkns"
+                  class="sc-bkzYnD klRfed"
                 >
                   <li
-                    class="sc-fFucqa bFYFFk"
+                    class="sc-idOiZg iHieYo"
                   >
                     <a
                       href="#"
@@ -151,7 +159,7 @@ exports[`<Index /> should match snapshot 1`] = `
                     </a>
                   </li>
                   <li
-                    class="sc-fFucqa bFYFFk"
+                    class="sc-idOiZg iHieYo"
                   >
                     <a
                       href="#"
@@ -160,7 +168,7 @@ exports[`<Index /> should match snapshot 1`] = `
                     </a>
                   </li>
                   <li
-                    class="sc-fFucqa bFYFFk"
+                    class="sc-idOiZg iHieYo"
                   >
                     <a
                       href="#"
@@ -171,18 +179,18 @@ exports[`<Index /> should match snapshot 1`] = `
                 </ul>
               </div>
               <div
-                class="sc-kstqJO"
+                class="sc-fodVek"
               >
                 <h4
-                  class="sc-hBEYId eBOXVv"
+                  class="sc-fFucqa fUsbUe"
                 >
                   Connection
                 </h4>
                 <ul
-                  class="sc-fodVek iOFkns"
+                  class="sc-bkzYnD klRfed"
                 >
                   <li
-                    class="sc-fFucqa bFYFFk"
+                    class="sc-idOiZg iHieYo"
                   >
                     <a
                       href="#"
@@ -191,7 +199,7 @@ exports[`<Index /> should match snapshot 1`] = `
                     </a>
                   </li>
                   <li
-                    class="sc-fFucqa bFYFFk"
+                    class="sc-idOiZg iHieYo"
                   >
                     <a
                       href="#"
@@ -200,7 +208,7 @@ exports[`<Index /> should match snapshot 1`] = `
                     </a>
                   </li>
                   <li
-                    class="sc-fFucqa bFYFFk"
+                    class="sc-idOiZg iHieYo"
                   >
                     <a
                       href="#"
@@ -211,18 +219,18 @@ exports[`<Index /> should match snapshot 1`] = `
                 </ul>
               </div>
               <div
-                class="sc-kstqJO"
+                class="sc-fodVek"
               >
                 <h4
-                  class="sc-hBEYId eBOXVv"
+                  class="sc-fFucqa fUsbUe"
                 >
                   Connection
                 </h4>
                 <ul
-                  class="sc-fodVek iOFkns"
+                  class="sc-bkzYnD klRfed"
                 >
                   <li
-                    class="sc-fFucqa bFYFFk"
+                    class="sc-idOiZg iHieYo"
                   >
                     <a
                       href="#"
@@ -231,7 +239,7 @@ exports[`<Index /> should match snapshot 1`] = `
                     </a>
                   </li>
                   <li
-                    class="sc-fFucqa bFYFFk"
+                    class="sc-idOiZg iHieYo"
                   >
                     <a
                       href="#"
@@ -240,7 +248,7 @@ exports[`<Index /> should match snapshot 1`] = `
                     </a>
                   </li>
                   <li
-                    class="sc-fFucqa bFYFFk"
+                    class="sc-idOiZg iHieYo"
                   >
                     <a
                       href="#"
@@ -251,18 +259,18 @@ exports[`<Index /> should match snapshot 1`] = `
                 </ul>
               </div>
               <div
-                class="sc-kstqJO"
+                class="sc-fodVek"
               >
                 <h4
-                  class="sc-hBEYId eBOXVv"
+                  class="sc-fFucqa fUsbUe"
                 >
                   Connection
                 </h4>
                 <ul
-                  class="sc-fodVek iOFkns"
+                  class="sc-bkzYnD klRfed"
                 >
                   <li
-                    class="sc-fFucqa bFYFFk"
+                    class="sc-idOiZg iHieYo"
                   >
                     <a
                       href="#"
@@ -271,7 +279,7 @@ exports[`<Index /> should match snapshot 1`] = `
                     </a>
                   </li>
                   <li
-                    class="sc-fFucqa bFYFFk"
+                    class="sc-idOiZg iHieYo"
                   >
                     <a
                       href="#"
@@ -280,7 +288,7 @@ exports[`<Index /> should match snapshot 1`] = `
                     </a>
                   </li>
                   <li
-                    class="sc-fFucqa bFYFFk"
+                    class="sc-idOiZg iHieYo"
                   >
                     <a
                       href="#"
@@ -293,7 +301,7 @@ exports[`<Index /> should match snapshot 1`] = `
             </div>
           </div>
           <div
-            class="sc-bkzYnD glPmbI"
+            class="sc-dIUeWJ kjSuug"
           >
             <span>
               <img
