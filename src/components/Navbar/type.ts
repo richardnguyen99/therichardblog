@@ -1,5 +1,20 @@
 import * as React from "react";
 
+export interface NavbarContextValue {
+  /**
+   * @description Controls the properties of the current active link for <NavbarLinkBar />
+   */
+  active?: {
+    pathname: string;
+    top: number;
+    left: number;
+    width: number;
+    onActiveChange?: React.Dispatch<
+      React.SetStateAction<{ top: number; left: number; width: number }>
+    >;
+  };
+}
+
 export interface NavbarProps {
   /**
    * @description Fires a callback when the navbar has shrank
