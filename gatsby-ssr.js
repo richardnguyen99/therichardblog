@@ -2,7 +2,7 @@
  * Gatsby configuration for production
  */
 import * as React from "react";
-import { LocationProvider } from "@gatsbyjs/reach-router";
+import { LocationProvider, useLocation } from "@gatsbyjs/reach-router";
 import "normalize.css";
 
 import GlobalStyle from "./src/components/GlobalStyle";

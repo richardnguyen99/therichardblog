@@ -72,9 +72,6 @@ module.exports = {
       },
       __key: "pages",
     },
-    {
-      resolve: "gatsby-plugin-feed",
-    },
     "gatsby-plugin-offline",
   ],
 };
