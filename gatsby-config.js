@@ -40,7 +40,7 @@ module.exports = {
           {
             resolve: "gatsby-remark-images",
             options: {
-              maxWidth: 560,
+              maxWidth: 680,
             },
           },
         ],
@@ -53,6 +53,20 @@ module.exports = {
         path: path.join(__dirname, "content", "posts"),
       },
       __key: "posts",
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "mdxImages",
+        path: path.join(__dirname, "content", "images"),
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "mdxThumbnails",
+        path: path.join(__dirname, "content", "thumbnails"),
+      },
     },
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
