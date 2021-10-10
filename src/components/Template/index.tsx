@@ -10,14 +10,19 @@ import { MDXRenderer } from "gatsby-plugin-mdx";
 
 import Layout from "@components/Layout";
 import { PostQuery } from "@generated/graphql";
+import { StyledPost, StyledFlexPostContainer } from "./style";
 
 const PostTemplate: React.FC<{ data: PostQuery }> = ({ data: { mdx } }) => {
   return (
     <Layout>
       <Layout.Container style={{ marginTop: "6rem" }}>
-        <MDXProvider>
-          <MDXRenderer headings={mdx.headings}>{mdx.body}</MDXRenderer>
-        </MDXProvider>
+        <StyledFlexPostContainer>
+          <StyledPost>
+            <MDXProvider>
+              <MDXRenderer headings={mdx.headings}>{mdx.body}</MDXRenderer>
+            </MDXProvider>
+          </StyledPost>
+        </StyledFlexPostContainer>
       </Layout.Container>
     </Layout>
   );

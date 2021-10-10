@@ -20,6 +20,7 @@ export const StyledNavbar = styled.nav`
   right: 0;
   left: 0;
   width: 100%;
+  z-index: 100;
 `;
 
 export const StyledNavbarContainer = styled.div`

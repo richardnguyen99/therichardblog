@@ -5,7 +5,7 @@ exports[`<Index /> should match snapshot 1`] = `
   <main>
     <div>
       <nav
-        class="sc-gsTEea dgGraA"
+        class="sc-gsTEea eUrKeP"
       >
         <div
           class="sc-dlfnuX jPvAmc"
@@ -86,17 +86,17 @@ exports[`<Index /> should match snapshot 1`] = `
                   <li
                     class="sc-jrAFXE hJCAtD"
                   >
-                    Tags
+                    Theme
                   </li>
                   <li
                     class="sc-jrAFXE hJCAtD"
                   >
-                    Tags
+                    Newsletter
                   </li>
                   <li
                     class="sc-jrAFXE hJCAtD"
                   >
-                    Tags
+                    RSS
                   </li>
                 </ul>
               </div>

@@ -54,15 +54,16 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
               description
               stack
               title
-            }
-            fields {
-              slug
+              thumbnail
             }
             timeToRead
             wordCount {
               paragraphs
               sentences
               words
+            }
+            fields {
+              slug
             }
           }
         }

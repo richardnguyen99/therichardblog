@@ -20,6 +20,19 @@ const GlobalStyle = createGlobalStyle`
     fill: #efefe1;
     background: #0e0e10;
   }
+
+  .anchor.before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    padding-right: 4px;
+    opacity: 0;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
 `;
 
 export default GlobalStyle;

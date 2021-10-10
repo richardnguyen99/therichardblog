@@ -42,9 +42,9 @@ const Layout: React.FC<LayoutProps> = React.forwardRef<HTMLDivElement, LayoutPro
                   </svg>
                 </Dropdown.Toggle>
                 <Dropdown.Menu className="southwest">
-                  <Dropdown.Item>Tags</Dropdown.Item>
-                  <Dropdown.Item>Tags</Dropdown.Item>
-                  <Dropdown.Item>Tags</Dropdown.Item>
+                  <Dropdown.Item>Theme</Dropdown.Item>
+                  <Dropdown.Item>Newsletter</Dropdown.Item>
+                  <Dropdown.Item>RSS</Dropdown.Item>
                 </Dropdown.Menu>
               </Dropdown>
             </Navbar.Link>
