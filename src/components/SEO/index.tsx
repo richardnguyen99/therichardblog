@@ -37,6 +37,10 @@ const SEO: React.FC<SEOProps> = ({ title = "", description = "", image = "", art
 
   return (
     <Helmet title={seo.title} titleTemplate={site.siteMetadata.titleTemplate}>
+      <link
+        href="//db.onlinewebfonts.com/c/501e03d4c0303f394033bcaf435f4b3e?family=Suisse+Int'l+Medium"
+        rel="stylesheet"
+      />
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
 

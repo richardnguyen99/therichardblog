@@ -4,13 +4,21 @@
  * @author Richard Nguyen <richard.ng0616@gmail.com>
  */
 import * as React from "react";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 import { MDXProvider } from "@mdx-js/react";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 
 import Layout from "@components/Layout";
 import { PostQuery } from "@generated/graphql";
-import { StyledPost, StyledFlexPostContainer } from "./style";
+import {
+  StyledPost,
+  StyledFlexPostContainer,
+  StyledPostHeader,
+  StyledPostHeaderNav,
+  StyledPostHeaderNavLeft,
+  StyledPostHeaderNavRight,
+  StyledPostHeaderNavLink,
+} from "./style";
 
 const PostTemplate: React.FC<{ data: PostQuery }> = ({ data: { mdx } }) => {
   return (
@@ -18,6 +26,19 @@ const PostTemplate: React.FC<{ data: PostQuery }> = ({ data: { mdx } }) => {
       <Layout.Container style={{ marginTop: "6rem" }}>
         <StyledFlexPostContainer>
           <StyledPost>
+            <div>
+              <StyledPostHeader>{mdx.frontmatter.title}</StyledPostHeader>
+              <StyledPostHeaderNav>
+                <StyledPostHeaderNavLeft>
+                  {mdx.frontmatter.created} <span style={{ margin: "0px 7px" }}>·</span>{" "}
+                  {mdx.timeToRead} min
+                  <StyledPostHeaderNavLink to={`/category/${mdx.frontmatter.categories[0]}`}>
+                    {mdx.frontmatter.categories[0]}
+                  </StyledPostHeaderNavLink>
+                </StyledPostHeaderNavLeft>
+                <StyledPostHeaderNavRight></StyledPostHeaderNavRight>
+              </StyledPostHeaderNav>
+            </div>
             <MDXProvider>
               <MDXRenderer headings={mdx.headings}>{mdx.body}</MDXRenderer>
             </MDXProvider>
