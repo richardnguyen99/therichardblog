@@ -4,7 +4,7 @@
  * @see https://www.gatsbyjs.org/docs/node-apis/
  */
 const path = require("path");
-const { createFilePath } = require("gatsby-source-filesystem");
+// const { createFilePath } = require("gatsby-source-filesystem");
 
 exports.onCreateWebpackConfig = ({ actions, stage, loaders }) => {
   actions.setWebpackConfig({
@@ -25,67 +25,67 @@ exports.onCreateWebpackConfig = ({ actions, stage, loaders }) => {
   });
 };
 
-exports.onCreateNode = ({ node, actions, getNode }) => {
-  const { createNodeField } = actions;
+// exports.onCreateNode = ({ node, actions, getNode }) => {
+// const { createNodeField } = actions;
 
-  if (node.internal.type === "Mdx") {
-    const value = createFilePath({ node, getNode });
+// if (node.internal.type === "Mdx") {
+// const value = createFilePath({ node, getNode });
 
-    createNodeField({
-      name: "slug",
-      node,
-      value: `/post${value}`,
-    });
-  }
-};
+// createNodeField({
+// name: "slug",
+// node,
+// value: `/post${value}`,
+// });
+// }
+// };
 
-exports.createPages = async ({ graphql, actions, reporter }) => {
-  const { createPage } = actions;
+// exports.createPages = async ({ graphql, actions, reporter }) => {
+// const { createPage } = actions;
 
-  const result = await graphql(`
-    query MyQuery {
-      allMdx {
-        edges {
-          node {
-            id
-            frontmatter {
-              categories
-              created
-              description
-              stack
-              title
-            }
-            fields {
-              slug
-            }
-            timeToRead
-            wordCount {
-              paragraphs
-              sentences
-              words
-            }
-          }
-        }
-      }
-    }
-  `);
+// const result = await graphql(`
+// query MyQuery {
+// allMdx {
+// edges {
+// node {
+// id
+// frontmatter {
+// categories
+// created
+// description
+// stack
+// title
+// }
+// fields {
+// slug
+// }
+// timeToRead
+// wordCount {
+// paragraphs
+// sentences
+// words
+// }
+// }
+// }
+// }
+// }
+// `);
 
-  if (result.errors) {
-    reporter.panicOnBuild(`🚨  ERROR: Loading "createPages" query`);
-  }
+// if (result.errors) {
+// reporter.panicOnBuild(`🚨  ERROR: Loading "createPages" query`);
+// }
 
-  const posts = result.data.allMdx.edges;
-  const tags = new Set();
+// const posts = result.data.allMdx.edges;
+// const tags = new Set();
 
-  posts.forEach(({ node }, index) => {
-    node.frontmatter.stack.forEach((tag) => {
-      tags.add(tag);
-    });
+// posts.forEach(({ node }, index) => {
+// node.frontmatter.stack.forEach((tag) => {
+// tags.add(tag);
+// });
 
-    createPage({
-      path: node.fields.slug,
-      component: path.resolve("./src/components/Template/index.tsx"),
-      context: { id: node.id },
-    });
-  });
-};
+// createPage({
+// path: node.fields.slug,
+// component: path.resolve("./src/components/Template/index.tsx"),
+// context: { id: node.id },
+// });
+// });
+// };
