@@ -49,10 +49,13 @@ jest.mock("gatsby", () => ({
 }));
 
 describe("<Index />", () => {
-
   it("should display the page heading", () => {
     const { getByText } = customRender(<IndexPage />);
 
-    expect(getByText("Hello, World")).toBeInTheDocument();
+    expect(
+      getByText(
+        "Hi, my name is Richard. I love to share everything I've learned in my tech journey, and help overcome what I've struggled."
+      )
+    ).toBeInTheDocument();
   });
 });
