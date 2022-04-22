@@ -54,7 +54,7 @@ describe("<Index />", () => {
 
     expect(
       getByText(
-        "Hi, my name is Richard. I love to share everything I've learned in my tech journey, and help overcome what I've struggled."
+        "Hi, my name is Richard. This website is my digital diary for everything I've learned, a collection of projects that I've been working on."
       )
     ).toBeInTheDocument();
   });

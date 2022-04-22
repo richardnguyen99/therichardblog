@@ -5,7 +5,9 @@
  */
 
 import HeroSVG from "./HeroSection";
+import GithubSVG from "./Github";
 
 export default Object.assign("SVG", {
   Hero: HeroSVG,
+  Github: GithubSVG,
 });
