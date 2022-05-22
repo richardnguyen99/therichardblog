@@ -6,11 +6,14 @@
 import * as React from "react";
 
 import Container from "@components/Container";
+import Section from "@components/Section";
 
 const Index: React.FC = () => {
   return (
     <Container.Main>
-      <h1>Hello, World</h1>
+      <Section.Main>
+        <h1>The Richard&apos;s Blog</h1>
+      </Section.Main>
     </Container.Main>
   );
 };

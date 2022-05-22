@@ -9,7 +9,9 @@
 import { css } from "styled-components";
 
 const NormalizeCSS = css`
-  *, ::before, ::after {
+  *,
+  ::before,
+  ::after {
     box-sizing: border-box;
   }
 
@@ -191,7 +193,8 @@ const NormalizeCSS = css`
   */
 
   button,
-  input { /* 1 */
+  input {
+    /* 1 */
     overflow: visible;
   }
 
@@ -201,7 +204,8 @@ const NormalizeCSS = css`
   */
 
   button,
-  select { /* 1 */
+  select {
+    /* 1 */
     text-transform: none;
   }
 
