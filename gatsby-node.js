@@ -1,17 +1,21 @@
+/**
+ * Implement Gatsby's Node APIs in this file
+ *
+ * @see https://www.gatsbyjs.org/docs/node-apis/
+ */
 const path = require("path");
 
-module.exports = {
-  siteMetadata: {
-    siteUrl: "https://www.therichardblog.com",
-    title: "The Richard's blog",
-    titleTemplate: "%s - The Richard's blog",
-    description: "A digital notebook of Richard",
-    image: "src/images/icon.png",
-    twitterUsername: "@richardnguyenmh",
-    github: "https://github.com/richardnguyen99",
-    linkedin: "https://www.linkedin.com/in/richardmhnguyen/",
-  },
-  plugins: [
-    "gatsby-plugin-typescript",
-  ],
+exports.onCreateWebpackConfig = ({ actions, stage, loaders }) => {
+  actions.setWebpackConfig({
+    resolve: {
+      alias: {
+        "@context": path.resolve(__dirname, "src", "context"),
+        "@hooks": path.resolve(__dirname, "src", "hooks"),
+        "@components": path.resolve(__dirname, "src", "components"),
+        "@pages": path.resolve(__dirname, "src", "pages"),
+        "@styles": path.resolve(__dirname, "src", "styles"),
+        "@generated": path.resolve(__dirname, "src", "generated"),
+      },
+    },
+  });
 };
