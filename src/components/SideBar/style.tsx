@@ -13,9 +13,9 @@ const StyledBaseSideBar = styled.div`
 `;
 
 export const StyledRightSideBar = styled(StyledBaseSideBar)`
-  border-left: 1px rgba(230, 230, 230, 1);
+  border-left: 1px solid rgba(230, 230, 230, 1);
 `;
 
 export const StyledLeftSideBar = styled(StyledBaseSideBar)`
-  border-right: 1px rgba(230, 230, 230, 1);
+  border-right: 1px solid rgba(230, 230, 230, 1);
 `;
