@@ -11,6 +11,7 @@ import SEO from "@components/SEO";
 import SideBar from "@components/SideBar";
 import { StyledContentTitleBar, StyledContentTitle } from "@components/Content/style";
 import SVG from "@components/svg";
+import Button from "@components/Button";
 
 const Index: React.FC = () => {
   return (
@@ -19,7 +20,7 @@ const Index: React.FC = () => {
       <Content>
         <StyledContentTitleBar>
           <StyledContentTitle>The Richard&apos;s Blog</StyledContentTitle>
-          <SVG.MenuDot size="24" />
+          <Button.Icon SVGComponent={<SVG.MenuDot size="24" />}></Button.Icon>
         </StyledContentTitleBar>
         <h1>The Richard&apos;s Blog</h1>
       </Content>

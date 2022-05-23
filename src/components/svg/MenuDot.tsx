@@ -1,7 +1,9 @@
 /**
- * React component for 3-horizontal-dots SVG
+ * React component for 3-horizontal-dots SVG.
  *
- * @author Richard Nguyen <richard.ng0616@gmail.com>
+ * The original SVG is written here:
+ * {@link https://primer.github.io/octicons/kebab-horizontal-16}
+ * {@link https://primer.github.io/octicons/kebab-horizontal-24}
  */
 import * as React from "react";
 

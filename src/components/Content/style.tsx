@@ -21,5 +21,5 @@ export const StyledContent = styled.main`
   max-width: 1100px;
   width: calc(100% - 394px);
   flex: 1 1 auto;
-  padding: 0rem 2rem;
+  padding: 0rem 4rem;
 `;
