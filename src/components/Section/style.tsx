@@ -16,6 +16,7 @@ export const StyledMainSection = styled.main`
   display: block;
   min-width: 0px;
   flex: 1 1 auto;
+  box-shadow: rgb(230, 230, 230) 1px 0px 0px inset;
 `;
 
 export const StyledMainTitle = styled.div`

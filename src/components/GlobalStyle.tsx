@@ -16,7 +16,6 @@ const GlobalStyle = createGlobalStyle`
     color: rgba(0,0,0, 0.9);
     background-color: rgba(255, 255, 255, 1);
     position: relative;
-    min-height: 100vh;
   }
 
   h1, h2, h3, h4, h5, h6 {

@@ -7,16 +7,19 @@
 import styled from "styled-components";
 
 export const StyledBaseContainer = styled.div`
-  position: relative;
-  outline: 0;
-  left: 0px;
-  transition: left 200ms ease;
-
+  width: 100%;
+  min-height: 100vh;
+  background: none;
+  display: flex;
+  justify-content: space-between;
   margin: 0 auto;
+  position: relative;
+  flex: 1 0 auto;
+  text-align: left;
 `;
 
 export const StyledMainContainer = styled(StyledBaseContainer)`
-  max-width: 1200px;
+  max-width: 1400px;
 `;
 
 export const StyledBlogContainer = styled(StyledBaseContainer)`

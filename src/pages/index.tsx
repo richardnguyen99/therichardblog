@@ -6,16 +6,20 @@
 import * as React from "react";
 
 import Container from "@components/Container";
-import Section from "@components/Section";
+import Content from "@components/Content";
 import SEO from "@components/SEO";
+import SideBar from "@components/SideBar";
 
 const Index: React.FC = () => {
   return (
     <Container.Main>
       <SEO title="Home" description="The Richard's blog home page" />
-      <Section.Main>
+      <Content>
         <h1>The Richard&apos;s Blog</h1>
-      </Section.Main>
+      </Content>
+      <SideBar position="right">
+        <h3>Richard Nguyen</h3>
+      </SideBar>
     </Container.Main>
   );
 };
