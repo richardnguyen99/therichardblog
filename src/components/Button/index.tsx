@@ -12,10 +12,11 @@ const IconButton: React.FC<IconButtonProps> = ({
   SVGComponent,
   tooltip = "",
   children,
+  onClickCallback = null,
   ...rest
 }) => {
   return (
-    <StyledIconButton>
+    <StyledIconButton onClick={onClickCallback}>
       {SVGComponent}
       {children}
     </StyledIconButton>

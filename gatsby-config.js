@@ -11,7 +11,5 @@ module.exports = {
     github: "https://github.com/richardnguyen99",
     linkedin: "https://www.linkedin.com/in/richardmhnguyen/",
   },
-  plugins: [
-    "gatsby-plugin-typescript",
-  ],
+  plugins: ["gatsby-plugin-typescript"],
 };
