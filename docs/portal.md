@@ -1,7 +1,9 @@
 # How to implement Portal components in Gatsby
 
 Author: Richard Nguyen <richard.ng0616@gmail.com>
+
 Date: 2022-05-24
+
 Short: This document briefly describes how Portal components are implemented in the site.
 
 ## Overview
