@@ -12,6 +12,7 @@ import SideBar from "@components/SideBar";
 import { StyledContentTitleBar, StyledContentTitle } from "@components/Content/style";
 import SVG from "@components/svg";
 import Button from "@components/Button";
+import Tooltip from "@components/Tooltip";
 
 const Index: React.FC = () => {
   return (
@@ -20,7 +21,9 @@ const Index: React.FC = () => {
       <Content>
         <StyledContentTitleBar>
           <StyledContentTitle>The Richard&apos;s Blog</StyledContentTitle>
-          <Button.Icon SVGComponent={<SVG.MenuDot size="24" />}></Button.Icon>
+          <Tooltip text="This is a very very long tooltip message for testing">
+            <Button.Icon SVGComponent={<SVG.MenuDot size="24" />} />
+          </Tooltip>
         </StyledContentTitleBar>
         <h1>The Richard&apos;s Blog</h1>
       </Content>

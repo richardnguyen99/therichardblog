@@ -16,7 +16,6 @@ const Portal: React.FC<PortalProps> = ({ children, type }) => {
   const [mounted, setMounted] = React.useState(false);
 
   React.useEffect(() => {
-    console.log(mounted);
     setMounted(true);
 
     return () => {

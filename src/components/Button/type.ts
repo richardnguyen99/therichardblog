@@ -5,8 +5,12 @@
  */
 import { ReactNode, MouseEvent as ReactMousEvent } from "react";
 
+export type ButtonMouseEvent = ReactMousEvent<HTMLButtonElement, MouseEvent>;
+
 interface BaseButtonProps {
-  onClickCallback?: (evt: ReactMousEvent<HTMLButtonElement, MouseEvent>) => void;
+  onClickCallback?: (evt: ButtonMouseEvent) => void;
+  onMouseEnterCallback?: (evt: ButtonMouseEvent) => void;
+  onMouseLeaveCallback?: (evt: ButtonMouseEvent) => void;
   children?: ReactNode | ReactNode[];
   [key: string]: any;
 }
