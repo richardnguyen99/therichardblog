@@ -1,25 +1,46 @@
+/**
+ * Main page for the site ("/")
+ *
+ * @author Richard Nguyen <richard.ng0616@gmail.com>
+ */
 import * as React from "react";
 
-import Layout from "@components/Layout";
-import Section from "@components/Section";
+import Container from "@components/Container";
+import Content from "@components/Content";
 import SEO from "@components/SEO";
-import { StyledBlinkingCursor as BlinkCursor } from "@components/Animation/BlinkingCursor";
-import useMediaHooks from "@hooks/useMediaQuery";
+import SideBar from "@components/SideBar";
+import { StyledContentTitleBar, StyledContentTitle } from "@components/Content/style";
+import SVG from "@components/svg";
+import Button from "@components/Button";
+import Tooltip from "@components/Tooltip";
+import Nav from "@components/Nav";
+import NavProvider from "@components/Nav/context";
 
-const IndexPage: React.FC = () => {
-  const [isWide] = useMediaHooks({ minWidth: "1023px" });
-
+const Index: React.FC = () => {
   return (
-    <main>
-      <SEO title="Home" description="Welcome to the Richard's blog" />
-      <Layout>
-        <Section.Heading>
-          The latest from Richard.
-          {isWide && <BlinkCursor>|</BlinkCursor>}
-        </Section.Heading>
-      </Layout>
-    </main>
+    <Container.Main>
+      <SEO title="Home" description="The Richard's blog home page" />
+      <Content>
+        <StyledContentTitleBar>
+          <StyledContentTitle>The Richard&apos;s Blog</StyledContentTitle>
+          <Tooltip text="More">
+            <Button.Icon SVGComponent={<SVG.MenuDot size="24" />} />
+          </Tooltip>
+        </StyledContentTitleBar>
+        <Nav.Provider url="home">
+          <Nav>
+            <Nav.Tab tab="home">Hello</Nav.Tab>
+            <Nav.Tab tab="about">About</Nav.Tab>
+            <Nav.Tab tab="projects">Projects</Nav.Tab>
+          </Nav>
+          <Nav.Content />
+        </Nav.Provider>
+      </Content>
+      <SideBar position="right">
+        <h3>Richard Nguyen</h3>
+      </SideBar>
+    </Container.Main>
   );
 };
 
-export default IndexPage;
+export default Index;

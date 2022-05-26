@@ -1,53 +1,64 @@
 /**
- * Core Tooltip components
+ * Index file for <Tooltip />  components
  *
- * @author Richard Nguyen
+ * @author Richard Nguyen <richard.ng0616@gmail.com>
  */
 import * as React from "react";
+import * as ReactDOM from "react-dom";
 
+import { StyledBaseTooltip } from "./style";
 import { TooltipProps } from "./type";
-import { StyledToolTip, StyledToolTipWrapper } from "./style";
+import Portal from "@components/Portal";
 
-const Tooltip: React.FC<TooltipProps> = ({ text, show, children }) => {
-  // timeoutRef is to keep track of the current timeout in the component
-  // This will prevent users from hovering on and off the component too fast.
-  const timeoutRef = React.useRef<NodeJS.Timeout>(null);
+const Tooltip: React.FC<TooltipProps> = ({ text, children, ...rest }) => {
+  const wrapperRef = React.useRef<HTMLElement>(null);
   const tooltipRef = React.useRef<HTMLDivElement>(null);
 
-  const [isMouseOn, setMouseOn] = React.useState(false);
-
-  const handleClick = () => {
-    tooltipRef.current.style.opacity = "0";
-    tooltipRef.current.style.transform = "scale(1)";
-  };
+  const [showing, setShowing] = React.useState(false);
 
   const handleMouseEnter = React.useCallback(() => {
-    timeoutRef.current = setTimeout(() => {
-      setMouseOn(true);
-    }, 1000);
-  }, [setMouseOn]);
+    setShowing(true);
+  }, []);
 
-  const handleMouseLeave = () => {
-    setMouseOn(false);
-    clearTimeout(timeoutRef.current);
+  const handleMouseLeave = React.useCallback(() => {
+    setShowing(false);
+  }, []);
+
+  const renderWrapper = () => {
+    return React.Children.map(children, (child) => {
+      if (React.isValidElement(child)) {
+        const childProps = {
+          ref: wrapperRef,
+          onMouseEnterCallback: handleMouseEnter,
+          onMouseLeaveCallback: handleMouseLeave,
+        };
+        return React.cloneElement(child, childProps);
+      }
+    });
   };
 
-  React.useEffect(() => {
-    const shouldShow = show && isMouseOn;
+  React.useLayoutEffect(() => {
+    if (tooltipRef.current !== null) {
+      const oldTooltipRect = tooltipRef.current.getBoundingClientRect();
+      const wrapperRect = wrapperRef.current.getBoundingClientRect();
 
-    tooltipRef.current.style.opacity = shouldShow ? "1" : "0";
-    tooltipRef.current.style.scale = shouldShow ? "1.2" : "1";
-  }, [show, isMouseOn]);
+      tooltipRef.current.style.top = wrapperRect.top + 40 + "px";
+      tooltipRef.current.style.left =
+        wrapperRect.left - oldTooltipRect.width / 2 + wrapperRect.width / 2 + "px";
+    }
+  }, [showing]);
+
+  const tooltipComponent = (
+    <StyledBaseTooltip ref={tooltipRef} {...rest}>
+      {text}
+    </StyledBaseTooltip>
+  );
 
   return (
-    <StyledToolTipWrapper>
-      <StyledToolTip ref={tooltipRef} style={{ opacity: 0 }}>
-        {text}
-      </StyledToolTip>
-      <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} onClick={handleClick}>
-        {children}
-      </div>
-    </StyledToolTipWrapper>
+    <>
+      {renderWrapper()}
+      {showing && ReactDOM.createPortal(tooltipComponent, document.getElementById("modal"))}
+    </>
   );
 };
 

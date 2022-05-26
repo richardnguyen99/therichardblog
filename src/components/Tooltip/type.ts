@@ -1,16 +1,18 @@
-export interface TooltipProps {
-  /**
-   * @description Displays the tooltip information
-   */
-  text: string;
+/**
+ * Type definitions for <Tooltip /> components
+ *
+ * @author Richard Nguyen <richard.ng0616@gmail.com>
+ */
+import React, { ReactNode } from "react";
 
-  /**
-   * @description Controls whether or not the tooltip should be displayed
-   *
-   * This is used to work with external components like <DropdownToggle />
-   * to indicate the visibility of the tooltip.
-   *
-   * @default true
-   */
-  show?: boolean;
+export interface TooltipProps {
+  position?: {
+    top: number;
+    left: number;
+    bottom?: number;
+    right?: number;
+  };
+  text: string;
+  children: ReactNode | ReactNode[];
+  [key: string]: any;
 }

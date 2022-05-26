@@ -1,36 +1,56 @@
 /**
- * Style definition for section components
+ * Styled components for <Section />
  *
  * @author Richard Nguyen <richard.ng0616@gmail.com>
  */
+
 import styled from "styled-components";
 
-export const StyledSectionHeadingWrapper = styled.section`
+export const StyledMainWrapper = styled.div`
+  flex-direction: row;
+  justify-content: space-between;
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  margin: 2.5rem;
-  margin-top: 7.5rem;
-
-  @media screen and (min-width: 768px) {
-    margin: 7.5rem;
-  }
-
-  @media screen and (min-width: 1920px) {
-    margin: 10rem;
-  }
 `;
 
-export const StyledSectionHeadingText = styled.h1`
-  margin: 0;
-  font-size: 200px;
-  font-weight: 600;
-  letter-spacing: -8px;
-  line-height: 90%;
-  width: 100%;
+export const StyledMainSection = styled.main`
+  display: block;
+  min-width: 0px;
+  flex: 1 1 auto;
+  box-shadow: rgb(230, 230, 230) 1px 0px 0px inset;
+`;
 
-  @media screen and (max-width: 1920px) {
-    font-size: 10.5vw;
-    letter-spacing: -0.3vw;
-  }
+export const StyledMainTitle = styled.div`
+  display: block;
+  justify-content: center;
+  display: flex;
+`;
+
+export const StyledMainTitlePanel = styled.div`
+  max-width: 692px;
+  margin: 0rem 2rem;
+  min-width: 0px;
+  width: 100%;
+`;
+
+export const StyledMainTitlePanelPadding = styled.div`
+  margin: 3.25rem 0 3rem;
+  box-shadow: rgb(230, 230, 230) 0px -1px 0px inset;
+  display: block;
+`;
+
+export const StyledMainInfo = styled.div`
+  display: block;
+  width: 394px;
+  min-height: 100vh;
+  border-left: 1px solid rgba(230, 230, 230, 1);
+  padding: 0rem 2rem;
+  box-sizing: border-box;
+`;
+
+export const StyledMainInfoWrapper = styled.div`
+  height: 100%;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  margin-top: 48px;
 `;

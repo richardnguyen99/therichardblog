@@ -1,5 +1,5 @@
 /**
- * About page for the site ("/about")
+ * Projects page for the site ("/projects")
  *
  * @author Richard Nguyen <richard.ng0616@gmail.com>
  */
@@ -14,6 +14,7 @@ import SVG from "@components/svg";
 import Button from "@components/Button";
 import Tooltip from "@components/Tooltip";
 import Nav from "@components/Nav";
+import NavProvider from "@components/Nav/context";
 
 const Index: React.FC = () => {
   return (
@@ -26,13 +27,12 @@ const Index: React.FC = () => {
             <Button.Icon SVGComponent={<SVG.MenuDot size="24" />} />
           </Tooltip>
         </StyledContentTitleBar>
-        <Nav.Provider url="about">
+        <Nav.Provider url="projects">
           <Nav>
             <Nav.Tab tab="home">Hello</Nav.Tab>
             <Nav.Tab tab="about">About</Nav.Tab>
             <Nav.Tab tab="projects">Projects</Nav.Tab>
           </Nav>
-          <Nav.Content />
         </Nav.Provider>
       </Content>
       <SideBar position="right">
