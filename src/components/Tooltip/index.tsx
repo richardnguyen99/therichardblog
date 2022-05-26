@@ -10,9 +10,6 @@ import { StyledBaseTooltip } from "./style";
 import { TooltipProps } from "./type";
 import Portal from "@components/Portal";
 
-const useIsomorphicLayoutEffect =
-  typeof window !== "undefined" ? React.useLayoutEffect : React.useEffect;
-
 const Tooltip: React.FC<TooltipProps> = ({ text, children, ...rest }) => {
   const wrapperRef = React.useRef<HTMLElement>(null);
   const tooltipRef = React.useRef<HTMLDivElement>(null);
@@ -42,8 +39,6 @@ const Tooltip: React.FC<TooltipProps> = ({ text, children, ...rest }) => {
 
   React.useLayoutEffect(() => {
     if (tooltipRef.current !== null) {
-      console.log(tooltipRef.current.getBoundingClientRect().width);
-
       const oldTooltipRect = tooltipRef.current.getBoundingClientRect();
       const wrapperRect = wrapperRef.current.getBoundingClientRect();
 

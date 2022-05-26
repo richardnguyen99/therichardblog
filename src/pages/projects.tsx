@@ -1,5 +1,5 @@
 /**
- * Main page for the site ("/")
+ * Projects page for the site ("/projects")
  *
  * @author Richard Nguyen <richard.ng0616@gmail.com>
  */
@@ -27,7 +27,7 @@ const Index: React.FC = () => {
             <Button.Icon SVGComponent={<SVG.MenuDot size="24" />} />
           </Tooltip>
         </StyledContentTitleBar>
-        <Nav.Provider url="home">
+        <Nav.Provider url="projects">
           <Nav>
             <Nav.Tab tab="home">Hello</Nav.Tab>
             <Nav.Tab tab="about">About</Nav.Tab>
