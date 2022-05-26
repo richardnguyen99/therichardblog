@@ -25,6 +25,24 @@ const GlobalStyle = createGlobalStyle`
   .h1, .h2, .h3, .h4, .h5, .h6 {
     font-family: 'Poppins', sans-serif;
   }
+
+  .content-transition-enter {
+    opacity: 0.01;
+  }
+
+  .content-transition-enter.content-transition-enter-active {
+    opacity: 1;
+    transition: opacity 700ms ease-in;
+  }
+
+  .content-transition-leave {
+    opacity: 1;
+  }
+
+  .content-transition-leave.content-transition-leave-active {
+    opacity: 0.01;
+    transition: opacity 100ms ease-in;
+  }
 `;
 
 export default GlobalStyle;

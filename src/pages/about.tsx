@@ -32,9 +32,8 @@ const Index: React.FC = () => {
             <Nav.Tab tab="about">About</Nav.Tab>
             <Nav.Tab tab="projects">Projects</Nav.Tab>
           </Nav>
+          <Nav.Content />
         </Nav.Provider>
-
-        <h1>The Richard&apos;s Blog</h1>
       </Content>
       <SideBar position="right">
         <h3>Richard Nguyen</h3>

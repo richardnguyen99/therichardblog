@@ -23,7 +23,7 @@ export const StyledNavItem = styled.div`
 `;
 
 export const StyledActiveLink = styled.div`
-  position: fixed;
+  position: sticky;
   height: 1px;
   background: black;
   transition: all 200ms ease-in;
