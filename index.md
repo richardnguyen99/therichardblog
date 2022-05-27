@@ -1,37 +1,27 @@
-## Welcome to GitHub Pages
+# The Richard's blog
 
-You can use the [editor on GitHub](https://github.com/richardnguyen99/therichardblog/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+:wave: Hi! Welcome to my repository for [my website](https://therichardblog.com/). This repo is the place containing everything for that site. If you're interested in the code organinzation and implemtation, this will provide all the details.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Run me
 
-### Markdown
+Make sure you have install these tools as prerequisites:
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+- [NVM](https://github.com/nvm-sh/nvm) <span>&mdash;</span> Manage NodeJS version, _or_
+- NodeJS `v14.19.3` (Check `.nvmrc` to get the correct version)
 
-```markdown
-Syntax highlighted code block
+1. Clone the repository to your local machine:
 
-# Header 1
-## Header 2
-### Header 3
+    git clone https://github.com/richardnguyen99/therichardblog.git
 
-- Bulleted
-- List
+2. Install all the dependencies:
 
-1. Numbered
-2. List
+    npm i
 
-**Bold** and _Italic_ and `Code` text
+3. Run locally:
 
-[Link](url) and ![Image](src)
-```
+    npm run start
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+4. Run locally in production environment:
 
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/richardnguyen99/therichardblog/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+    npm run build   # build the site
+    npm run serve   # run the site
