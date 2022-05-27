@@ -3,6 +3,7 @@
  *
  * @author Richard Nguyen <richard.ng0616@gmail.com>
  */
+import PreviewLink from "@components/PreviewLink";
 import * as React from "react";
 
 import { StyledContentContainer } from "./style";
@@ -14,9 +15,10 @@ export const AboutContent: React.FC = () => (
 
     <h3>About me</h3>
     <p>
-      My name is Richard Nguyen. I originally came from Vietnam, enrolled in Highline College for
-      Associated of Science in Computer Science and currently studying Bachelor Degree in Computer
-      Science at Seattle University, Washington, U.S.
+      My name is Richard Nguyen. I originally came from Vietnam, enrolled in{" "}
+      <PreviewLink url="https://cis.highline.edu/" text="Highline College" /> for Associated of
+      Science in Computer Science and currently studying Bachelor Degree in Computer Science at
+      Seattle University, Washington, U.S.
     </p>
     <p>
       I tend to learn everything I find intertested in programming. However, my strongest field is
@@ -37,7 +39,7 @@ export const AboutContent: React.FC = () => (
 
     <h3>About this site</h3>
     <p>
-      I&apos; created this website as my digital notebooks that I write down every struggle and
+      I&apos;ve created this website as my digital notebooks that I write down every struggle and
       solution I experience during my learning journey. It helps me know what the problem is and how
       I solve it.
     </p>
@@ -46,5 +48,9 @@ export const AboutContent: React.FC = () => (
       before. So they learn another solution to solve the problem, or they give me some feedback to
       correct or improve my solution.
     </p>
+    <p>
+      You can also learn how I write this website via this <PreviewLink url="" text="Github link" />
+    </p>
+    <p></p>
   </StyledContentContainer>
 );
