@@ -69,7 +69,7 @@ const PreviewLink: React.FC<PreviewLinkProps> = ({
       {text}
       {hovering &&
         ReactDOM.createPortal(
-          <StyledPreviewFrame ref={iframeRef} src={url} />,
+          <StyledPreviewFrame ref={iframeRef} src={url} loading="lazy" />,
           document.getElementById("modal")
         )}
     </StyledPreviewLink>

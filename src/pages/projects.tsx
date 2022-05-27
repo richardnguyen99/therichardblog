@@ -22,7 +22,7 @@ const Index: React.FC = () => {
       <SEO title="Home" description="The Richard's blog home page" />
       <Content>
         <StyledContentTitleBar>
-          <StyledContentTitle>The Richard&apos;s Blog</StyledContentTitle>
+          <StyledContentTitle>Richard H. Nguyen</StyledContentTitle>
           <Tooltip text="More">
             <Button.Icon SVGComponent={<SVG.MenuDot size="24" />} />
           </Tooltip>
