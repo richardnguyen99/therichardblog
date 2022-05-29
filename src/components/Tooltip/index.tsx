@@ -41,8 +41,9 @@ const Tooltip: React.FC<TooltipProps> = ({ text, children, ...rest }) => {
     if (tooltipRef.current !== null) {
       const oldTooltipRect = tooltipRef.current.getBoundingClientRect();
       const wrapperRect = wrapperRef.current.getBoundingClientRect();
+      const bodyRect = document.getElementsByTagName("body")[0].getBoundingClientRect();
 
-      tooltipRef.current.style.top = wrapperRect.top + 40 + "px";
+      tooltipRef.current.style.top = wrapperRect.top + 40 - bodyRect.top + "px";
       tooltipRef.current.style.left =
         wrapperRect.left - oldTooltipRect.width / 2 + wrapperRect.width / 2 + "px";
     }

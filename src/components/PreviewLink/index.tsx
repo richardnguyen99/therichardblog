@@ -43,7 +43,6 @@ const PreviewLink: React.FC<PreviewLinkProps> = ({
     if (!hovering || !linkRef) return;
 
     const linkRefRect = linkRef.current.getBoundingClientRect();
-    const windowScr = window.screen;
     const bodyElm = document.getElementsByTagName("body")[0];
     const bodyElmRect = bodyElm.getBoundingClientRect();
 

@@ -41,8 +41,9 @@ const NavTab: React.FC<NavTabProps> = React.forwardRef<HTMLDivElement, NavTabPro
           mounted: true,
         });
 
-        const url = props.tab === "home" ? "/" : `/${props.tab}/`;
+        console.log("mounted: " + navContext.position.mounted);
 
+        const url = navContext.activeTab === "home" ? "/" : `/${props.tab}/`;
         window.history.pushState({}, "", url);
       }
     }, [navContext, props.tab]);

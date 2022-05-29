@@ -30,8 +30,6 @@
     "@loadable/component": "^5.15.2",
     "gatsby": "^4.14.1",
     "gatsby-cli": "^4.14.0",
-    "gatsby-plugin-loadable-components-ssr": "^4.2.0",
-    "gatsby-plugin-portal": "^1.0.7",
     "gatsby-plugin-typescript": "^4.14.0",
     "gatsby-source-github-api": "^1.0.0",
     "gatsby-source-graphql": "^4.15.0",

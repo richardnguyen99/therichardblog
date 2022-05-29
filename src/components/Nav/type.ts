@@ -16,7 +16,7 @@ export interface NavContextValue {
   activeTab: string;
   position?: Position;
 
-  onToggleActiveTab?: Dispatch<SetStateAction<string>>;
+  onToggleActiveTab?: (tab: string) => void;
   onUpdatePosition?: Dispatch<SetStateAction<Position>>;
 }
 
@@ -26,7 +26,7 @@ export interface NavProps {
 }
 
 export interface NavProviderProps extends NavProps {
-  url: string;
+  url?: string;
 }
 
 export interface NavTabProps extends NavProps {

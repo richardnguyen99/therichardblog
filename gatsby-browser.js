@@ -3,26 +3,18 @@
  */
 
 import * as React from "react";
-import * as ReactDOM from "react-dom";
-//import loadable from "@loadable/component/";
+import { LocationProvider } from "@reach/router";
 
 import GlobalStyle from "./src/components/GlobalStyle";
-
-const loadableReady = require("@loadable/component").loadableReady;
-
-//export const replaceHydrateFunction = () => {
-//return (element, container, callback) => {
-//loadableReady(() => {
-//ReactDOM.render(element, container, callback);
-//});
-//};
-//};
+import NavProvider from "./src/components/Nav/context";
 
 export const wrapRootElement = ({ element }) => {
   return (
-    <>
-      <GlobalStyle />
-      {element}
-    </>
+    <LocationProvider>
+      <NavProvider>
+        <GlobalStyle />
+        {element}
+      </NavProvider>
+    </LocationProvider>
   );
 };

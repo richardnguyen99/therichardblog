@@ -5,6 +5,18 @@
  */
 import styled from "styled-components";
 
+export const StyledSideBarFixedContent = styled.div`
+  position: fixed;
+`;
+
+export const StyledSideBarHeader = styled.div`
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 3rem 0rem;
+`;
+
 const StyledBaseSideBar = styled.div`
   display: block;
   width: 394px;
